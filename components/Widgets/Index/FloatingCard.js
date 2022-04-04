@@ -13,6 +13,13 @@ const FloatingCard = ({ icon, number, text, isInverted, tw, tw2 }) => {
         </span>
         <span className={`${!isInverted ? "text-primary" : ""}`}> {text}</span>
       </p>
+      <style jsx>
+        {`
+          p {
+            font-size: clamp(0.8rem, 0.4rem + 2vw, 1.2rem);
+          }
+        `}
+      </style>
     </div>
   );
 };

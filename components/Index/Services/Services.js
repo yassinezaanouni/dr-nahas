@@ -8,6 +8,7 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper";
 import ServiceCard from "./ServiceCard";
 import { Button } from "../../Widgets/Button";
+import Link from "next/link";
 
 const Services = () => {
   return (
@@ -17,7 +18,11 @@ const Services = () => {
         <h2 className="text-center">
           Our Dental <span>Services</span>
         </h2>
-        <Button text={"View All"} tw="hidden md:block whitespace-nowrap" />
+        <Link href={"/services"}>
+          <div>
+            <Button text={"View All"} tw="hidden md:block whitespace-nowrap" />
+          </div>
+        </Link>
       </div>
       <Swiper
         slidesPerView={"auto"}

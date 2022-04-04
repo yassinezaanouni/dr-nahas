@@ -29,7 +29,9 @@ const AboutMe = () => {
           icon="/icons/happy-patients.svg"
           number={500}
           text="Happy Patients"
-          tw={"absolute bottom-0 z-10  translate-x-1/2  -translate-y-1/2 "}
+          tw={
+            "absolute bottom-0 z-10  translate-x-1/4 md:translate-x-1/2  -translate-y-1/2 "
+          }
           tw2={" h-[17.24px] w-[24.62px] md:h-[29px] md:w-[41.5px]"}
         />
         <div className="mx-auto h-[87%] w-[87%] rounded-full bg-primary/20"></div>

@@ -16,7 +16,7 @@ const TreatmentCard = ({ title, image, icon }) => {
         className={`group relative cursor-pointer `}
         onClick={() => setIsFullScreen(!isFullScreen)}
       >
-        <div className="relative -z-10 h-[16.45rem] w-[15rem] overflow-hidden rounded-xl lg:h-[25.25rem]  lg:w-[23.125rem]">
+        <div className="relative -z-10 h-[16.45rem] w-[15rem] overflow-hidden rounded-xl macbook:h-[25.25rem]  macbook:w-[23.125rem]">
           <Image src={image} alt="title" layout={"fill"} />
         </div>
         <div className="absolute right-4 top-4 opacity-0  transition-all duration-700 group-hover:opacity-100">

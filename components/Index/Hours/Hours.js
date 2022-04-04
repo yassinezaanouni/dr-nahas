@@ -1,6 +1,7 @@
 import { Button } from "../../Widgets/Button";
 import WorkHours from "./WorkHours";
 import Image from "next/image";
+import Link from "next/link";
 
 const Hours = () => {
   return (
@@ -22,7 +23,11 @@ const Hours = () => {
             <span className="text-primary"> Rating From Our Patients</span>
           </h3>
         </div>
-        <Button text="Book Appointment" tw="max-w-[16rem] mx-auto lg:mx-0" />
+        <Link href={"/book"}>
+          <div className="mx-auto max-w-[16rem] lg:mx-0">
+            <Button text="Book Appointment" tw="" />
+          </div>
+        </Link>
       </div>
       <div className="relative">
         <div className="  absolute right-0 -z-10 translate-x-1/2 -translate-y-1/2	">

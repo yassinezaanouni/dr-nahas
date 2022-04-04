@@ -10,6 +10,7 @@ const Logo = ({ isDisplayed = true }) => {
           <div className="flex items-center gap-4">
             <Image
               src={"/icons/logo.svg"}
+              alt="Dr.Nahas"
               width={48.29}
               height={47.64}
               style={{ transform: "rotate(131.07deg)" }}
