@@ -5,10 +5,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        macbook: "1281px",
+      },
       colors: {
         primary: "#239ECB",
         light: "#00000099",
         "grey-100": "#F5F6F8",
+
         "grey-200": "#626263",
       },
     },

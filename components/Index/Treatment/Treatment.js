@@ -16,11 +16,6 @@ const Treatment = () => {
   }
   return (
     <section className="f-ai-c flex-col">
-      {/* <iframe
-        width="1139"
-        style={{ aspectRatio: "16/9" }}
-        src="https://www.youtube.com/embed/BnNwIBWMNQI"
-      ></iframe> */}
       <div
         className="vido-container group  relative cursor-pointer"
         onClick={() => {
@@ -41,7 +36,7 @@ const Treatment = () => {
         </button>
         <video ref={myVideo} src="/treatment.mp4"></video>
       </div>
-      <div className=" my-12 text-center md:my-28">
+      <div className=" my-12 text-center lg:my-20">
         <h2 className="mb-4">Befor & After Treatment</h2>
         <p className="text-light">Some examples from lastest Dr nahas work</p>
       </div>
