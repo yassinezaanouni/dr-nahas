@@ -38,7 +38,7 @@ const AboutMe = () => {
         <div className="only-desktop absolute -z-10 translate-y-1/4 -translate-x-1/2	">
           <Image src="/widgets/points.svg" alt="" width="143" height={"105"} />
         </div>
-        <h2>
+        <h2 className="mb-6">
           <span>Find Out</span> More About <br /> Dr.Nahas
         </h2>
         <p className="leading-relaxed text-light	">

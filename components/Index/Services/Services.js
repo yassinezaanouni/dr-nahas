@@ -14,7 +14,7 @@ const Services = () => {
     <section className="f-ai-c  relative flex-col justify-center  ">
       <div className="absolute inset-0 left-0 -z-10 w-[200vw] -translate-x-1/2 bg-grey-100"></div>
       <div className="f-ai-c my-4 w-full justify-between px-6 md:my-8 md:mx-8 md:px-16  lg:mb-16 lg:px-24">
-        <h2 className="">
+        <h2 className="text-center">
           Our Dental <span>Services</span>
         </h2>
         <Button text={"View All"} tw="hidden md:block whitespace-nowrap" />

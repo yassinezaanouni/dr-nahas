@@ -45,7 +45,6 @@ h2 {
   font-weight: 900;
 }
 section h2 {
-  @apply mb-6;
   font-size: clamp(1rem, 1rem + 3vw, 3.2rem);
 }
 section h2 span {
