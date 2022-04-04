@@ -1,13 +1,17 @@
 import Image from "next/image";
-const FloatingCard = ({ icon, number, text, isInverted }) => {
+const FloatingCard = ({ icon, number, text, isInverted, tw, tw2 }) => {
   return (
-    <div className=" f-ai-c w-full  gap-8 rounded-2xl bg-white py-6 px-8 font-black shadow-2xl shadow-black/30">
-      <Image src={icon} width="41.5" height={"29"} />
+    <div
+      className={`f-ai-c gap-3 rounded-2xl bg-white p-4 text-xs font-black shadow-2xl shadow-black/30 md:gap-8 md:py-6 md:px-8 md:pr-16 ${tw} md:text-lg`}
+    >
+      <div className={` f-ai-c ${tw2}`}>
+        <img src={icon} />
+      </div>
       <p>
         <span className={`${isInverted ? "text-primary" : ""}`}>
-          {number}++
-        </span>{" "}
-        <span className={`${!isInverted ? "text-primary" : ""}`}>{text}</span>
+          {number}++{isInverted ? <br></br> : <></>}
+        </span>
+        <span className={`${!isInverted ? "text-primary" : ""}`}> {text}</span>
       </p>
     </div>
   );

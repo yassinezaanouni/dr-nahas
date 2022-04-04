@@ -14,7 +14,7 @@ const MainHero = () => {
       </div>
       <div className=" img-container">
         <div className=" relative  justify-self-end">
-          <div className="only-desktop absolute bottom-0 z-10 w-80 -translate-x-1/2  -translate-y-1/2 ">
+          <div className="only-desktop absolute bottom-0 z-10  -translate-x-1/2  -translate-y-1/2 ">
             <FloatingCard
               icon="/icons/happy-patients.svg"
               number={500}

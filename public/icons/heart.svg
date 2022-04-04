@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54">
+  <g id="Group_2107" data-name="Group 2107" transform="translate(-122.4 0)">
+    <path id="Path_15563" data-name="Path 15563" d="M12,0H42A12,12,0,0,1,54,12V42A12,12,0,0,1,42,54H12A12,12,0,0,1,0,42V12A12,12,0,0,1,12,0Z" transform="translate(122.4 0)" fill="#f44"/>
+    <path id="heart-solid" d="M21.593,33.4a6.391,6.391,0,0,0-8.72.636l-.921.949-.921-.949a6.39,6.39,0,0,0-8.72-.636,6.711,6.711,0,0,0-.463,9.716l9.043,9.337a1.465,1.465,0,0,0,2.117,0l9.043-9.337a6.706,6.706,0,0,0-.458-9.716Z" transform="translate(137.448 -15.435)" fill="#fff"/>
+  </g>
+</svg>
