@@ -2,7 +2,7 @@ import { Button } from "../../Widgets/Button";
 import Image from "next/image";
 const BookAppointment = () => {
   return (
-    <div className="f-ai-c mt-12  flex-wrap justify-between gap-8 rounded-2xl bg-grey-100 py-12 px-6 md:mx-8 md:px-16 lg:mt-20 lg:flex-nowrap lg:px-24">
+    <div className="f-ai-c mt-12 flex-wrap justify-between gap-8 rounded-2xl bg-grey-100 py-12 px-6 md:mx-8 md:px-16 lg:mt-20 lg:flex-nowrap lg:px-24">
       <div className="flex-1">
         <div className="absolute  -translate-y-1/4	">
           <Image src="/widgets/points.svg" alt="" width="143" height={"105"} />
@@ -17,7 +17,7 @@ const BookAppointment = () => {
         </div>
         <div className="flex flex-1 flex-col gap-7">
           <input type="text" placeholder="Your Email..." />
-          <Button text="Book Now" classes={"flex-1"} />
+          <Button text="Book Now" tw={"flex-1"} />
         </div>
       </form>
       <style jsx>

@@ -9,6 +9,7 @@ body {
   margin: 0;
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  overflow-x: hidden;
 }
 
 :root {
@@ -43,6 +44,16 @@ h2 {
   font-family: "Nunito Sans";
   font-weight: 900;
 }
+section h2 {
+  @apply mb-6;
+  font-size: clamp(1rem, 1rem + 3vw, 3.2rem);
+}
+section h2 span {
+  color: var(--clr-primary);
+}
+p {
+  font-size: clamp(1rem, 1rem + 2vw, 1.2rem);
+}
 h1 {
   font-weight: 700;
 }
@@ -50,6 +61,19 @@ h1 {
 .f-ai-c {
   display: flex;
   align-items: center;
+}
+
+/*** Services Swiper***/
+.servicesSwiper {
+  overflow: unset !important;
+}
+.servicesSwiper .swiper-wrapper {
+  justify-content: center;
+
+  overflow: unset;
+}
+.servicesSwiper .swiper-slide {
+  max-width: 259px;
 }
 @media (max-width: 1024px) {
   .only-desktop {

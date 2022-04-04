@@ -1,11 +1,13 @@
 import AboutMe from "./AboutMe/AboutMe";
 import Hero from "./Hero/Hero";
+import Services from "./Services/Services";
 
 const Index = () => {
   return (
     <div>
       <Hero />
-      <AboutMe/>
+      <AboutMe />
+      <Services />
     </div>
   );
 };

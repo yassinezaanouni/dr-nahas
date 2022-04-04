@@ -10,7 +10,7 @@ const MainHero = () => {
           <div className="absolute bottom-1/2 right-0 -z-10 h-28 w-28 translate-y-1/2 rounded-full bg-primary blur-[150px] md:blur-[110px]"></div>
         </h1>
 
-        <Button text={"Discover"} classes={" mb-8 mt-4 lg:my-8"} />
+        <Button text={"Discover"} tw={" mb-8 mt-4 lg:my-8"} />
       </div>
       <div className=" img-container">
         <div className=" relative  justify-self-end">
@@ -40,7 +40,7 @@ const MainHero = () => {
       <style jsx>
         {`
           h1 {
-            font-size: clamp(1rem, 1rem + 3vw, 5.2rem);
+            font-size: clamp(1rem, 1.25rem + 3vw, 5.2rem);
           }
           .img-container {
             @apply flex justify-end md:w-[60%] lg:w-[50%];

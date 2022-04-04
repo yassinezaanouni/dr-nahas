@@ -53,20 +53,6 @@ const AboutMe = () => {
           - Dubai.
         </p>
       </div>
-      <style jsx>
-        {`
-          h2 {
-            @apply mb-6;
-            font-size: clamp(1rem, 2rem + 3vw, 3rem);
-          }
-          h2 span {
-            color: var(--clr-primary);
-          }
-          p {
-            font-size: clamp(1rem, 1rem + 2vw, 1.2rem);
-          }
-        `}
-      </style>
     </section>
   );
 };
