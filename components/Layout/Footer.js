@@ -5,7 +5,7 @@ import Logo from "../Widgets/Logo";
 
 const Footer = () => {
   return (
-    <footer className="bg-grey-100 py-5 sm:py-10 lg:py-16 lg:pr-32">
+    <footer className="bg-white py-5 sm:py-10 lg:py-16 lg:pr-32">
       <div className="main flex flex-wrap justify-between gap-8   ">
         <div className="flex flex-col gap-4">
           <Logo />

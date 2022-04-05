@@ -1,17 +1,46 @@
 import Image from "next/image";
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useCallback, useEffect } from "react";
 const TreatmentCard = ({ title, image, icon }) => {
   const [isFullScreen, setIsFullScreen] = useState(false);
+  const escFunction = useCallback((event) => {
+    if (event.keyCode === 27) {
+      setIsFullScreen(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    document.addEventListener("keydown", escFunction);
+
+    return () => {
+      document.removeEventListener("keydown", escFunction);
+    };
+  }, [escFunction]);
   return (
     <>
-      {isFullScreen && (
-        <div
-          className="overlay f-ai-c fixed inset-0 z-20 justify-center bg-black/80 backdrop-blur-sm "
-          onClick={() => setIsFullScreen(false)}
-        >
-          <Image src={image} alt="title" height="780" width="715" />
-        </div>
-      )}
+      <AnimatePresence>
+        {isFullScreen && (
+          <motion.div
+            key="overlay"
+            className="overlay f-ai-c fixed inset-0 z-30 justify-center bg-black/80 backdrop-blur-sm "
+            onClick={() => setIsFullScreen(false)}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, beforeChildren: true }}
+            transition={{ duration: 0.15, type: "tween" }}
+            exit={{ opacity: 0 }}
+          >
+            <motion.div
+              key="modal"
+              initial={{ scale: 0.5 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 0.15, type: "tween" }}
+            >
+              <Image src={image} alt="title" height="780" width="1215" />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
       <div
         className={`group relative cursor-pointer `}
         onClick={() => setIsFullScreen(!isFullScreen)}

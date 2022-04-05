@@ -35,13 +35,18 @@ const MainHero = () => {
             width="481"
             height={"502"}
           />
+          <div className="  absolute right-0 -z-10 translate-x-1/2 -translate-y-1/2	">
+            <Image
+              src="/widgets/points.svg"
+              alt=""
+              width="143"
+              height={"105"}
+            />
+          </div>
         </div>
       </div>
       <style jsx>
         {`
-          h1 {
-            font-size: clamp(1rem, 1.25rem + 3vw, 5.2rem);
-          }
           .img-container {
             @apply flex justify-end md:w-[60%] lg:w-[50%];
           }

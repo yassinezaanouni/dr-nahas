@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       screens: {
         macbook: "1281px",
+        xsm: "370px",
       },
       colors: {
         primary: "#239ECB",

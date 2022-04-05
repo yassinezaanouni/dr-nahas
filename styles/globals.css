@@ -40,7 +40,7 @@ section {
 
 h1,
 h2 {
-  @apply leading-tight;
+  @apply z-20 leading-tight;
   font-family: "Nunito Sans";
   font-weight: 900;
 }
@@ -54,15 +54,28 @@ p {
   font-size: clamp(1rem, 1rem + 2vw, 1.2rem);
 }
 h1 {
+  font-size: clamp(1rem, 1.25rem + 3vw, 5.2rem);
   font-weight: 700;
+}
+section img {
+  object-fit: cover;
+  object-position: center center;
+}
+section:last-of-type {
+  @apply my-5 sm:my-10 lg:my-16;
 }
 /** FLEX **/
 .f-ai-c {
   display: flex;
   align-items: center;
 }
-
+@media (max-width: 1024px) {
+  .only-desktop {
+    display: none;
+  }
+}
 /*** Services Swiper***/
+
 .servicesSwiper {
   overflow: unset !important;
 }
@@ -74,8 +87,72 @@ h1 {
 .servicesSwiper .swiper-slide {
   max-width: 259px;
 }
-@media (max-width: 1024px) {
-  .only-desktop {
-    display: none;
-  }
+
+/*********************/
+
+/*** Moments Swiper***/
+
+.momentsSwiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  overflow: auto;
+  overflow: visible !important;
 }
+
+.momentsSwiper .swiper-slide {
+  @apply overflow-hidden rounded-2xl;
+  background-position: center;
+  background-size: cover;
+  width: 18.75rem;
+
+  height: 18.75rem;
+}
+
+.momentsSwiper .swiper-slide img {
+  display: block;
+  width: 100%;
+}
+.momentsSwiper .swiper-button-next,
+.momentsSwiper .swiper-button-prev {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px !important;
+  height: 30px !important;
+  background-color: var(--clr-primary);
+  border-radius: 50%;
+  right: 2rem;
+  top: -2rem;
+  left: unset;
+  color: white !important;
+}
+.momentsSwiper .swiper-button-prev {
+  right: 5rem;
+}
+
+.momentsSwiper .swiper-button-next:after,
+.momentsSwiper .swiper-button-prev:after {
+  font-size: 1rem;
+  transform: translateX(0.1rem);
+}
+.momentsSwiper .swiper-button-prev:after {
+  transform: translateX(-0.1rem);
+}
+
+/*********************/
+
+/****** Figures Swiper *****/
+
+.figuresSwiper {
+  overflow: visible !important;
+}
+.figuresSwiper .swiper-slide {
+}
+/****************************/
+
+/******* Share Swiper ********/
+.shareSwiper .swiper-slide {
+  max-width: 21.25rem;
+}
+/*****************************/

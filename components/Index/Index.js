@@ -1,3 +1,4 @@
+import Testimonial from "../Testimonial/Testimonial";
 import AboutMe from "./AboutMe/AboutMe";
 import Hero from "./Hero/Hero";
 import Hours from "./Hours/Hours";
@@ -12,6 +13,7 @@ const Index = () => {
       <Services />
       <Treatment />
       <Hours />
+      <Testimonial />
     </div>
   );
 };

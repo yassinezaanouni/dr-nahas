@@ -7,7 +7,7 @@ const Logo = ({ isDisplayed = true }) => {
     return (
       <>
         <Link href={"/"}>
-          <div className="flex items-center gap-4">
+          <div className="flex cursor-pointer items-center gap-4">
             <Image
               src={"/icons/logo.svg"}
               alt="Dr.Nahas"

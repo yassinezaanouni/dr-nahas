@@ -13,19 +13,39 @@ const Header = () => {
         <Logo />
         <nav className="">
           <ul className="f-ai-c gap-6 font-bold text-light sm:gap-10">
-            <li className={`${router.pathname == "/" ? "active" : ""}`}>
+            <li
+              className={`${router.pathname == "/" ? "active" : ""}`}
+              onClick={() => {
+                divNav.current.classList.remove("nav-open");
+              }}
+            >
               <Link href="/">Home</Link>
             </li>
 
-            <li className={`${router.pathname == "/services" ? "active" : ""}`}>
+            <li
+              className={`${router.pathname == "/services" ? "active" : ""}`}
+              onClick={() => {
+                divNav.current.classList.remove("nav-open");
+              }}
+            >
               <Link href="/services">Services</Link>
             </li>
 
-            <li className={`${router.pathname == "/gallery" ? "active" : ""}`}>
+            <li
+              className={`${router.pathname == "/gallery" ? "active" : ""}`}
+              onClick={() => {
+                divNav.current.classList.remove("nav-open");
+              }}
+            >
               <Link href="/gallery">Gallery</Link>
             </li>
 
-            <li className={`${router.pathname == "/booking" ? "active" : ""}`}>
+            <li
+              className={`${router.pathname == "/booking" ? "active" : ""}`}
+              onClick={() => {
+                divNav.current.classList.remove("nav-open");
+              }}
+            >
               <Link href="/booking">Booking</Link>
             </li>
           </ul>
