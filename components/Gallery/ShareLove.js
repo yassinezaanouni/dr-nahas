@@ -23,7 +23,7 @@ const ShareLove = () => {
       <div className="absolute inset-0 left-0 -z-10 w-[200vw] -translate-x-1/2 overflow-hidden bg-grey-100"></div>{" "}
       <div className="absolute right-0 top-[40%] aspect-square w-60 -translate-y-1/2  translate-x-1/2 rounded-full bg-primary/30   md:top-[50%]"></div>{" "}
       <div className=" absolute top-0 -translate-y-1/2 ">
-        <Image src="/icons/quote2.svg" width={60} height={50} />
+        <Image src="/icons/quote2.svg" width={60} height={50} alt="" />
       </div>
       <figure className="">
         <figcaption>

@@ -11,7 +11,7 @@ const WorkHours = ({ tw }) => {
       <Hour days="Saturday" time="9AM-5PM" />
       <Hour days="Sunday" time="Closed" />
       <div className="f-ai-c mt-6 flex-wrap  justify-center gap-1 rounded-xl bg-primary/20 p-4 font-[500] text-primary md:mt-12 md:gap-8 md:p-6  md:px-8">
-        <Image src="/icons/phone.svg" width="33" height="33" />
+        <Image src="/icons/phone.svg" width="33" height="33" alt="" />
         Our Contact : +971 54 371 6446{" "}
       </div>
     </div>

@@ -6,10 +6,10 @@ const AboutMe = () => {
     <section className="f-ai-c flex-wrap gap-4 2xl:items-start 2xl:gap-x-20">
       <div className="relative aspect-square w-[37rem]">
         <div className="absolute left-4 bottom-11  z-10  md:bottom-24">
-          <Image src="/img/doctor.png" width="586" height="585" />
+          <Image src="/img/doctor.png" width="586" height="585" alt="doctor" />
         </div>
         <div className="absolute bottom-[30%] -left-[3%]">
-          <Image src="/widgets/points.svg" width="162" height="119" />
+          <Image src="/widgets/points.svg" width="162" height="119" alt="" />
         </div>
         <BluredDiv
           icon="/icons/about-me.svg"
