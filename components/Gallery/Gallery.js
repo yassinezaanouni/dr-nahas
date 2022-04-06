@@ -8,7 +8,6 @@ const Gallery = () => {
     <>
       <GalleryPhotos />
       <Moments />
-      <Treatment isVideo={false} />
       <ShareLove />
     </>
   );

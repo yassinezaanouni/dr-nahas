@@ -12,11 +12,11 @@ const BookAppointment = () => {
 
       <form className="z-10 flex  flex-1  flex-wrap gap-7">
         <div className="flex flex-1 flex-col gap-7">
-          <input type="text" placeholder="Your Name..." />
-          <input type="date" />
+          <input type="text" placeholder="Your Name..." required />
+          <input type="date" required />
         </div>
         <div className="flex flex-1 flex-col gap-7">
-          <input type="text" placeholder="Your Email..." />
+          <input type="email" placeholder="Your Email..." required />
           <Button text="Book Now" tw={"flex-1"} />
         </div>
       </form>

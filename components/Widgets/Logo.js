@@ -13,9 +13,8 @@ const Logo = ({ isDisplayed = true }) => {
               alt="Dr.Nahas"
               width={48.29}
               height={47.64}
-              style={{ transform: "rotate(131.07deg)" }}
             />
-            <h2 className="">Dr.nahas</h2>
+            <h2 className="">Dr.Nahas</h2>
           </div>
         </Link>
         <style jsx>

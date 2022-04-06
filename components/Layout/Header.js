@@ -23,15 +23,6 @@ const Header = () => {
             </li>
 
             <li
-              className={`${router.pathname == "/services" ? "active" : ""}`}
-              onClick={() => {
-                divNav.current.classList.remove("nav-open");
-              }}
-            >
-              <Link href="/services">Services</Link>
-            </li>
-
-            <li
               className={`${router.pathname == "/gallery" ? "active" : ""}`}
               onClick={() => {
                 divNav.current.classList.remove("nav-open");
@@ -39,7 +30,14 @@ const Header = () => {
             >
               <Link href="/gallery">Gallery</Link>
             </li>
-
+            <li
+              className={`${router.pathname == "/services" ? "active" : ""}`}
+              onClick={() => {
+                divNav.current.classList.remove("nav-open");
+              }}
+            >
+              <Link href="/services">Services</Link>
+            </li>
             <li
               className={`${router.pathname == "/booking" ? "active" : ""}`}
               onClick={() => {
