@@ -30,7 +30,7 @@ const MainHero = () => {
             />
           </div>
           <Image
-            src="/img/hero.png"
+            src="/img/hero.webp"
             alt="Doctor Nahas doctor near me"
             width="481"
             height={"502"}

@@ -12,8 +12,8 @@ export function Hour({ days, time, tw, tw2 }) {
         <h4 className="whitespace-nowrap text-light">{days}</h4>
       </div>
       <p className={`text-light ${tw2}`}>{"- - - -"}</p>
-      <div className={`f-ai-c  gap-3 md:gap-5	`}>
-        <Image src="/icons/clock.svg" width="24" height="24" layout="fixed" />
+      <div className={`f-ai-c  gap-1 md:gap-5	`}>
+        <Image src="/icons/clock.svg" width="22" height="22" layout="fixed" />
         <h4 className={`${time == "Closed" ? "text-[#D84646]" : ""}`}>
           {time}
         </h4>

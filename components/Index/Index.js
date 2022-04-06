@@ -2,7 +2,7 @@ import Testimonial from "../Testimonial/Testimonial";
 import AboutMe from "./AboutMe/AboutMe";
 import Hero from "./Hero/Hero";
 import Hours from "./Hours/Hours";
-import Services from "./Services/Services";
+import ServicesCards from "./Services/ServicesCards";
 import Treatment from "./Treatment/Treatment";
 
 const Index = () => {
@@ -10,7 +10,7 @@ const Index = () => {
     <div>
       <Hero />
       <AboutMe />
-      <Services />
+      <ServicesCards />
       <Treatment />
       <Hours />
       <Testimonial />

@@ -11,23 +11,23 @@ const BookAppointement = () => {
           <span> Appoinment</span>
           <div className="absolute bottom-1/2 left-0 z-20 h-28 w-28 translate-y-1/2 rounded-full bg-primary blur-[150px] md:blur-[100px]"></div>
         </h2>
-        <div className="flex w-full flex-1 flex-wrap gap-3 md:gap-8 xsm:flex-nowrap">
+        <div className="flex w-full flex-1 gap-1 md:gap-8 xsm:flex-nowrap">
           <Hour
             days="Mon - Wed"
             time="8AM-7PM"
-            tw="flex-col xsm:items-start min-w-[7rem]"
+            tw="flex-col xsm:items-start "
             tw2="hidden"
           />
           <Hour
             days="Thu - Fri"
             time="8AM-6PM"
-            tw="flex-col xsm:items-start min-w-[7rem]"
+            tw="flex-col xsm:items-start "
             tw2="hidden"
           />
           <Hour
             days="Saturday"
             time="9AM-5PM"
-            tw="flex-col xsm:items-start min-w-[7rem]"
+            tw="flex-col xsm:items-start "
             tw2="hidden"
           />
         </div>

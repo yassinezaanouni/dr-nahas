@@ -18,19 +18,19 @@ export const GalleryPhotos = () => {
       </h2>
       <div className="imgs-container  ">
         <div className="relative mx-auto h-[8.125rem] w-full justify-center overflow-hidden rounded-xl sm:h-[14.125rem] lg:col-span-2 xl:h-[20.5625rem] macbook:h-[22.5625rem]">
-          <Image src="/img/gallery/1.jpg" alt="clinic dentist" layout="fill" />
+          <Image src="/img/gallery/1.webp" alt="clinic dentist" layout="fill" />
         </div>
         <div className="relative mx-auto h-[8.125rem] w-full justify-center overflow-hidden rounded-xl sm:h-[14.125rem] lg:col-span-5 xl:h-[20.5625rem] macbook:h-[22.5625rem]">
-          <Image src="/img/gallery/2.jpg" alt="clinic dentist" layout="fill" />
+          <Image src="/img/gallery/2.webp" alt="clinic dentist" layout="fill" />
         </div>
         <div className="relative mx-auto h-[8.125rem] w-full justify-center overflow-hidden rounded-xl sm:h-[14.125rem] lg:col-span-3 xl:h-[20.5625rem] macbook:h-[22.5625rem]">
-          <Image src="/img/gallery/5.jpg" alt="clinic dentist" layout="fill" />
+          <Image src="/img/gallery/5.webp" alt="clinic dentist" layout="fill" />
         </div>{" "}
         <div className="lg:col-span-[1.5] relative mx-auto h-[8.125rem] w-full justify-center overflow-hidden rounded-xl sm:h-[14.125rem] lg:col-span-2 xl:h-[20.5625rem] macbook:h-[22.5625rem]">
-          <Image src="/img/gallery/3.jpg" alt="clinic dentist" layout="fill" />
+          <Image src="/img/gallery/3.webp" alt="clinic dentist" layout="fill" />
         </div>
         <div className="relative mx-auto h-[8.125rem] w-full  justify-center overflow-hidden rounded-xl sm:h-[14.125rem] lg:col-span-2 xl:h-[20.5625rem] macbook:h-[22.5625rem]">
-          <Image src="/img/gallery/4.jpg" alt="clinic dentist" layout="fill" />
+          <Image src="/img/gallery/4.webp" alt="clinic dentist" layout="fill" />
         </div>
       </div>
       <style jsx>

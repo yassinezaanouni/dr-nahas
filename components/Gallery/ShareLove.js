@@ -9,14 +9,14 @@ import { Pagination, Autoplay } from "swiper";
 import Image from "next/image";
 const ShareLove = () => {
   const imgs = [
-    "/img/testimonial/1.png",
+    "/img/testimonial/1.webp",
 
-    "/img/testimonial/2.png",
-    "/img/testimonial/3.png",
-    "/img/testimonial/2.png",
-    "/img/testimonial/1.png",
-    "/img/testimonial/3.png",
-    "/img/testimonial/2.png",
+    "/img/testimonial/2.webp",
+    "/img/testimonial/3.webp",
+    "/img/testimonial/2.webp",
+    "/img/testimonial/1.webp",
+    "/img/testimonial/3.webp",
+    "/img/testimonial/2.webp",
   ];
   return (
     <section className="relative py-10 sm:py-20 lg:py-32 ">

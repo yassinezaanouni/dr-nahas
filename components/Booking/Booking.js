@@ -4,9 +4,9 @@ import BookAppointement from "../Widgets/BookAppointement";
 
 const Booking = () => {
   return (
-    <section>
+    <>
       <BookAppointement />
-    </section>
+    </>
   );
 };
 

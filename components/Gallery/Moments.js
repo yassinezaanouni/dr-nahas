@@ -12,13 +12,13 @@ import { Navigation, Pagination } from "swiper";
 import Image from "next/image";
 const Moments = () => {
   const imgs = [
-    "/img/moments/1.png",
-    "/img/moments/2.png",
-    "/img/moments/3.png",
-    "/img/moments/1.png",
-    "/img/moments/2.png",
-    "/img/moments/3.png",
-    "/img/moments/1.png",
+    "/img/moments/1.webp",
+    "/img/moments/2.webp",
+    "/img/moments/3.webp",
+    "/img/moments/1.webp",
+    "/img/moments/2.webp",
+    "/img/moments/3.webp",
+    "/img/moments/1.webp",
   ];
   return (
     <section>

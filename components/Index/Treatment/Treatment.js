@@ -44,32 +44,32 @@ const Treatment = ({ isVideo = true }) => {
       </div>
       <div className="f-ai-c flex-wrap justify-center gap-8">
         <TreatmentCard
-          image="/img/treatment/1.png"
+          image="/img/treatment/1.webp"
           icon={"/icons/treatment/treatment2.svg"}
           title="Veneers"
         />{" "}
         <TreatmentCard
-          image="/img/treatment/2.png"
+          image="/img/treatment/2.webp"
           icon={"/icons/treatment/treatment2.svg"}
           title="Veneers"
         />{" "}
         <TreatmentCard
-          image="/img/treatment/3.jpg"
+          image="/img/treatment/3.webp"
           icon={"/icons/treatment/treatment2.svg"}
           title="Veneers"
         />{" "}
         <TreatmentCard
-          image="/img/treatment/4.png"
+          image="/img/treatment/4.webp"
           icon={"/icons/treatment/treatment2.svg"}
           title="Veneers"
         />{" "}
         <TreatmentCard
-          image="/img/treatment/5.jpg"
+          image="/img/treatment/5.webp"
           icon={"/icons/treatment/treatment2.svg"}
           title="Veneers"
         />{" "}
         <TreatmentCard
-          image="/img/treatment/6.png"
+          image="/img/treatment/6.webp"
           icon={"/icons/treatment/treatment2.svg"}
           title="Veneers"
         />{" "}

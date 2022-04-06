@@ -14,14 +14,14 @@ const ServicesDropdowns = () => {
       h3: "Foollow Up",
       p4: "For 48 hours: Dont smoke, drink warm water, avoid foods and liquids containing stain",
       imgs1: [
-        "/img/services/service1/1.jpg",
-        "/img/services/service1/2.jpg",
-        "/img/services/service1/3.jpg",
+        "/img/services/service1/1.webp",
+        "/img/services/service1/2.webp",
+        "/img/services/service1/3.webp",
       ],
       imgs2: [
-        "/img/services/service1/4.jpg",
-        "/img/services/service1/5.jpg",
-        "/img/services/service1/6.jpg",
+        "/img/services/service1/4.webp",
+        "/img/services/service1/5.webp",
+        "/img/services/service1/6.webp",
       ],
       steps: [
         "Placing the retractor",
@@ -44,14 +44,14 @@ const ServicesDropdowns = () => {
       h3: "Foollow Up",
       p4: "For 48 hours: Dont smoke, drink warm water, avoid foods and liquids containing stain",
       imgs1: [
-        "/img/services/service1/1.jpg",
-        "/img/services/service1/2.jpg",
-        "/img/services/service1/3.jpg",
+        "/img/services/service1/1.webp",
+        "/img/services/service1/2.webp",
+        "/img/services/service1/3.webp",
       ],
       imgs2: [
-        "/img/services/service1/4.jpg",
-        "/img/services/service1/5.jpg",
-        "/img/services/service1/6.jpg",
+        "/img/services/service1/4.webp",
+        "/img/services/service1/5.webp",
+        "/img/services/service1/6.webp",
       ],
       steps: [
         "Placing the retractor",

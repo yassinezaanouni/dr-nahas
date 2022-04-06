@@ -23,7 +23,7 @@ const TreatmentCard = ({ title, image, icon }) => {
         {isFullScreen && (
           <motion.div
             key="overlay"
-            className="overlay f-ai-c fixed inset-0 z-30 justify-center bg-black/80 backdrop-blur-sm "
+            className="overlay f-ai-c fixed inset-0 z-50 justify-center bg-black/80 backdrop-blur-sm "
             onClick={() => setIsFullScreen(false)}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, beforeChildren: true }}

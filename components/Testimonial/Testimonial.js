@@ -16,19 +16,19 @@ const Testimonial = () => {
       author: "Alena Pale.",
       text: "I Am Very Happy To Come, I Get Very Good Service With Very Friendly Doctor.",
       rating: 5,
-      image: "/img/testimonial/1.png",
+      image: "/img/testimonial/1.webp",
     },
     {
       author: "Henrieta U.",
       text: "Just what I was looking for. I am really satisfied with my Doctor.",
       rating: 4,
-      image: "/img/testimonial/2.png",
+      image: "/img/testimonial/2.webp",
     },
     {
       author: "Abraham M.",
       text: "Doctor is the most valuable business resource we have EVER purchased.",
       rating: 5,
-      image: "/img/testimonial/3.png",
+      image: "/img/testimonial/3.webp",
     },
   ];
   return (

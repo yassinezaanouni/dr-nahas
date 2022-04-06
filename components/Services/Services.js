@@ -1,7 +1,9 @@
 import Image from "next/image";
+import ServicesCards from "../Index/Services/ServicesCards";
 import BookAppointement from "../Widgets/BookAppointement";
 import ServicesDropdowns from "../Widgets/ServicesDropdown/ServicesDropdowns";
 import Stats from "./Stats";
+
 const Services = () => {
   return (
     <>
@@ -20,13 +22,16 @@ const Services = () => {
         </h1>
         <div className="relative z-20 mx-auto h-[14.75rem] w-full overflow-hidden rounded-2xl md:h-[25.75rem] macbook:h-[47.75rem]">
           <Image
-            src="/img/services/services.jpg"
+            src="/img/services/services.webp"
             alt="clinic dentist"
             layout="fill"
           />
         </div>
 
-        <ServicesDropdowns />
+        {/* <ServicesDropdowns /> */}
+        <div className="mt-16">
+          <ServicesCards />
+        </div>
       </section>
 
       <section className="relative py-10 sm:py-20 lg:py-32">
