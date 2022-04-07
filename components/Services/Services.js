@@ -28,9 +28,13 @@ const Services = () => {
           />
         </div>
 
-        {/* <ServicesDropdowns /> */}
-        <div className="mt-16">
-          <ServicesCards />
+        <div className="mt-16 md:text-left">
+          <ServicesCards
+            isServicePage={true}
+            // setDropNumber={setDropNumber}
+            // dropNumber={dropNumber}
+          />
+          {/* <ServicesDropdowns /> */}
         </div>
       </section>
 

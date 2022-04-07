@@ -11,6 +11,9 @@ body {
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   overflow-x: hidden;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 :root {
   --clr-primary: #239ecb;
@@ -51,10 +54,10 @@ section h2 span {
   color: var(--clr-primary);
 }
 p {
-  font-size: clamp(1rem, 1rem + 2vw, 1.2rem);
+  font-size: clamp(1rem, 1rem + 2vw, 1.125rem);
 }
 h1 {
-  font-size: clamp(1rem, 1.25rem + 3vw, 5.2rem);
+  font-size: clamp(1rem, 1.35rem + 3vw, 5.2rem);
   font-weight: 700;
 }
 section img {
@@ -77,12 +80,13 @@ section:last-of-type {
 /*** Services Swiper***/
 
 .servicesSwiper {
-  overflow: unset !important;
+  width: 100%;
+  margin-top: 2.4rem;
+  overflow: auto;
+  overflow: visible !important;
 }
 .servicesSwiper .swiper-wrapper {
-  justify-content: center;
-
-  overflow: unset;
+  /* overflow: unset; */
 }
 .servicesSwiper .swiper-slide {
   max-width: 259px;
