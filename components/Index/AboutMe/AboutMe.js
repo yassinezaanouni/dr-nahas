@@ -40,10 +40,10 @@ const AboutMe = () => {
           icon="/icons/happy-patients.svg"
           number={500}
           text={t("heroCard")}
-          tw={`absolute bottom-0 z-10  translate-x-1/4 ${
+          tw={`absolute bottom-0 z-10  ${
             router.locale === "ar"
-              ? "md:-translate-x-1/2"
-              : "md:translate-x-1/2"
+              ? "-translate-x-1/4 "
+              : " translate-x-1/4 md:translate-x-1/2"
           } -translate-y-1/2 `}
           tw2={" h-[17.24px] w-[24.62px] md:h-[29px] md:w-[41.5px]"}
         />

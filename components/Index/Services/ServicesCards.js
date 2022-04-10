@@ -189,7 +189,7 @@ const ServicesCards = ({ isServicePage = false }) => {
       )}
       <Link href="/services/#services">
         <div className={`${isServicePage ? "hidden" : ""}`}>
-          <Button text={t("serviceBtn")} tw={`  mt-8 md:hidden `} />
+          <Button text={t("servicesBtn")} tw={`  mt-8 md:hidden `} />
         </div>
       </Link>
     </section>

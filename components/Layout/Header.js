@@ -15,7 +15,7 @@ const Header = () => {
       <div className="main f-ai-c  w-full justify-between gap-2">
         <Logo name={menuItems[0]} />
         <nav className="">
-          <ul className="f-ai-c gap-6 font-bold text-light sm:gap-10">
+          <ul className="f-ai-c gap-6 font-bold text-light sm:gap-8 lg:gap-10">
             <li
               className={`${router.pathname == "/" ? "active" : ""}`}
               onClick={() => {
@@ -50,8 +50,24 @@ const Header = () => {
               <Link href="/booking">{menuItems[4]}</Link>
             </li>
           </ul>
+          <div className="f-ai-c flex-col justify-between gap-[1vw] md:hidden ">
+            <div className={" f-ai-c  "}>
+              <Image src={"/icons/dubai.png"} width={73} height={28} />
+            </div>
+            <button className="cursor-pointer bg-transparent px-2 py-1 hover:text-[#F89B1B] active:scale-110">
+              {router.locale == "ar" ? (
+                <Link href={router.asPath} locale="en">
+                  <a> English</a>
+                </Link>
+              ) : (
+                <Link href={router.asPath} locale="ar">
+                  <a> العربية</a>
+                </Link>
+              )}
+            </button>
+          </div>
         </nav>
-        <div className="f-ai-c justify-between gap-[1vw] ">
+        <div className="hidden items-center  justify-between gap-[1vw] md:flex ">
           <div className={" f-ai-c  only-desktop"}>
             <Image src={"/icons/dubai.png"} width={73} height={28} />
           </div>
@@ -103,10 +119,7 @@ const Header = () => {
             display: none;
           }
 
-          @media (max-width: 768px) {
-            .languages {
-              display: none;
-            }
+          @media (max-width: 767px) {
             .nav-btn {
               display: unset;
               z-index: 99;

@@ -11,8 +11,9 @@ import { Navigation, Pagination } from "swiper";
 
 import Image from "next/image";
 import { useTranslation } from "next-i18next";
-
+import { useRouter } from "next/router";
 const Moments = () => {
+  const router = useRouter();
   const { t } = useTranslation("common");
   const imgs = [
     "/img/moments/1.webp",
@@ -25,7 +26,13 @@ const Moments = () => {
   ];
   return (
     <section>
-      <h2 className=" mb-6 max-w-[10ch] md:mb-16 md:max-w-[30ch]">{t("g3")}</h2>
+      <h2
+        className={` mb-6 max-w-[10ch] ${
+          router.locale == "ar" ? " mb-14" : ""
+        } md:mb-16 md:max-w-[30ch]`}
+      >
+        {t("g3")}
+      </h2>
       <Swiper
         grabCursor={true}
         slidesPerView={"auto"}
