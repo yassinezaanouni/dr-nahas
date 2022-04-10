@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 const FloatingCard = ({ icon, number, text, isInverted, tw, tw2 }) => {
   return (
     <div

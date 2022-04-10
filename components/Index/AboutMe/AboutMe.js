@@ -3,6 +3,7 @@ import BluredDiv from "../../Widgets/BluredDiv";
 import FloatingCard from "../../Widgets/Index/FloatingCard";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
+import { Parallax } from "react-scroll-parallax";
 
 const AboutMe = () => {
   const router = useRouter();
@@ -20,18 +21,21 @@ const AboutMe = () => {
           icon="/icons/about-me.svg"
           tw=" absolute right-0 translate-y-1/2 -translate-x-1/3"
         />
-        <FloatingCard
-          icon="/icons/heart.svg"
-          number={7}
-          text={t("expCard")}
-          isInverted={true}
-          tw={`absolute text-light left-0   ${
-            router.locale == "ar" ? "md:translate-x-1/5" : "-translate-x-1/4"
-          }`}
-          tw2={
-            "absolute top-0 right-0 -translate-y-1/2 -translate-x-1/2 md:-translate-x-full w-[36px] aspect-square md:w-[51px] "
-          }
-        />
+        <Parallax translateX={["0px", "50px"]}>
+          <FloatingCard
+            icon="/icons/heart.svg"
+            number={7}
+            text={t("expCard")}
+            isInverted={true}
+            tw={`absolute text-light left-0   ${
+              router.locale == "ar" ? "md:translate-x-1/5" : "-translate-x-1/4"
+            }`}
+            tw2={
+              "absolute top-0 right-0 -translate-y-1/2 -translate-x-1/2 md:-translate-x-full w-[36px] aspect-square md:w-[51px] "
+            }
+          />
+        </Parallax>
+
         <FloatingCard
           icon="/icons/happy-patients.svg"
           number={500}
@@ -43,6 +47,7 @@ const AboutMe = () => {
           } -translate-y-1/2 `}
           tw2={" h-[17.24px] w-[24.62px] md:h-[29px] md:w-[41.5px]"}
         />
+
         <div className="mx-auto h-[87%] w-[87%] rounded-full bg-primary/20"></div>
       </div>
       <div className="right flex-1 md:min-w-[18rem]">

@@ -4,6 +4,8 @@ import FloatingCard from "../../Widgets/Index/FloatingCard";
 
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
+import { Parallax } from "react-scroll-parallax";
+
 const MainHero = () => {
   const { t } = useTranslation("index");
   const router = useRouter();
@@ -24,11 +26,14 @@ const MainHero = () => {
               router.locale == "ar" ? "translate-x-1/2" : "-translate-x-1/2"
             }  -translate-y-1/2 `}
           >
-            <FloatingCard
-              icon="/icons/happy-patients.svg"
-              number={500}
-              text={t("heroCard")}
-            />
+            {" "}
+            <Parallax translateX={["0px", "-80px"]} speed={-6}>
+              <FloatingCard
+                icon="/icons/happy-patients.svg"
+                number={500}
+                text={t("heroCard")}
+              />
+            </Parallax>
           </div>
           <div className="  absolute -z-10 -translate-x-1/2 -translate-y-1/2	">
             <Image

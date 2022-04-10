@@ -3,6 +3,7 @@ import "../styles/globals.css";
 import Head from "next/head";
 import { appWithTranslation } from "next-i18next";
 import { useRouter } from "next/router";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -30,9 +31,11 @@ function MyApp({ Component, pageProps }) {
         />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
-      <Layout dir={router.locale === "ar" ? "rtl" : "ltr"}>
-        <Component {...pageProps} />
-      </Layout>
+      <ParallaxProvider>
+        <Layout dir={router.locale === "ar" ? "rtl" : "ltr"}>
+          <Component {...pageProps} />
+        </Layout>
+      </ParallaxProvider>
     </>
   );
 }

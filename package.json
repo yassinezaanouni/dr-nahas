@@ -16,6 +16,7 @@
     "react-animated-number": "^0.4.4",
     "react-dom": "18.0.0",
     "react-intersection-observer": "^8.33.1",
+    "react-scroll-parallax": "^3.0.6",
     "sharp": "^0.30.3",
     "styled-jsx-plugin-postcss": "^4.0.1",
     "swiper": "^8.0.7"
