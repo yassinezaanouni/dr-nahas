@@ -14,7 +14,11 @@ export function Hour({ days, time, tw, tw2 }) {
       <p className={`text-light ${tw2}`}>{"- - - -"}</p>
       <div className={`f-ai-c  gap-1 md:gap-5	`}>
         <Image src="/icons/clock.svg" width="22" height="22" layout="fixed" />
-        <h4 className={`${time == "Closed" ? "text-[#D84646]" : ""}`}>
+        <h4
+          className={`${
+            time == "Closed" || time == "مغلق" ? "text-[#D84646]" : ""
+          }`}
+        >
           {time}
         </h4>
       </div>

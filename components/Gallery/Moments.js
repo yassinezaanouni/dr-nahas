@@ -10,7 +10,10 @@ import "swiper/css/navigation";
 import { Navigation, Pagination } from "swiper";
 
 import Image from "next/image";
+import { useTranslation } from "next-i18next";
+
 const Moments = () => {
+  const { t } = useTranslation("common");
   const imgs = [
     "/img/moments/1.webp",
     "/img/moments/2.webp",
@@ -22,9 +25,7 @@ const Moments = () => {
   ];
   return (
     <section>
-      <h2 className=" mb-6 max-w-[10ch] md:mb-16 md:max-w-[30ch]">
-        Dr.Nahas Moment
-      </h2>
+      <h2 className=" mb-6 max-w-[10ch] md:mb-16 md:max-w-[30ch]">{t("g3")}</h2>
       <Swiper
         grabCursor={true}
         slidesPerView={"auto"}

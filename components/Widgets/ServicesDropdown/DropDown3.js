@@ -1,26 +1,17 @@
 import Image from "next/image";
 
+import { useTranslation } from "next-i18next";
 const DropDown3 = () => {
+  const { t } = useTranslation("dropDown3");
+
   return (
-    <div className="f-ai-c mt-12 flex-col gap-12 text-left md:gap-16 lg:mt-20 lg:gap-16">
+    <div className="f-ai-c  text-start  mt-12 flex-col gap-12 md:gap-16 lg:mt-20 lg:gap-16">
       <div className="flex-container">
         <div className="left">
-          <h2 className="text-primary">Teeth Whitening </h2>
-          <h3 className="font-bold text-grey-200">What is it?</h3>
-          <p>
-            Teeth Whitening is a procedure that helps in changing the teeth
-            color from the present shade to a brighter one, for getting a nicer
-            look and color. There are many types of teeth whitening: Home
-            Bleaching, Office Bleaching, 3d crest whitening, Toothpaste
-            Bleaching.
-          </p>
-          <p>
-            Today we will explain the bleaching at the clinic: Teeth may get
-            stained by bacteria, food and tobacco. teeth whitening is changing
-            the tooth color to become lighter The bleaching gel usually contains
-            hydrogen peroxide or carbamide peroxide that is placed on the teeth,
-            it can be chemically activated or using the blue light
-          </p>
+          <h2 className="text-primary">{t("h1")} </h2>
+          <h3 className="font-bold text-grey-200">{t("h2")}</h3>
+          <p>{t("p1")} </p>
+          <p>{t("p2")}</p>
         </div>
         <div className="right relative h-[26.75rem] w-full overflow-hidden rounded-xl">
           <Image
@@ -33,25 +24,8 @@ const DropDown3 = () => {
 
       <div className="flex-container flex-row-reverse">
         <div className="left">
-          <h3 className="font-bold text-grey-200">How it works?</h3>
-
-          <ul>
-            <li>Placing the retractor</li>
-            <li>Protecting the gum</li>
-            <li>Placing the bleaching material</li>
-            <li>
-              {" "}
-              The tooth whitening gel enters your enamel and lifts the stains
-              activation of blue light
-            </li>
-            <li>
-              The process is performed 3 cycles, The gel is reapplied between
-              each session
-            </li>
-            <li>
-              The bleaching session is completed for a total of 45 minutes
-            </li>
-          </ul>
+          <h3 className="font-bold text-grey-200">{t("h3")}</h3>
+          <p className="whitespace-pre-line">{t("p3")}</p>
         </div>
         <div className="right relative h-[21.75rem] w-full overflow-hidden rounded-xl">
           <Image
@@ -63,12 +37,13 @@ const DropDown3 = () => {
       </div>
       <div className="flex-container ">
         <div className="left">
-          <h3 className="font-bold text-grey-200">Final Results</h3>
+          <h3 className="font-bold text-grey-200">{t("h4")}</h3>
 
-          <p>
-            The change of shade may vary from one person to another. However a
-            change in shades is guaranteed
-          </p>
+          <p>{t("p4")}</p>
+          <h5>{t("h5")}</h5>
+          <p className="whitespace-pre-line">{t("p5")}</p>
+          <h5>{t("h6")}</h5>
+          <p className="whitespace-pre-line">{t("p6")}</p>
         </div>
         <div className="right relative h-[21.75rem] w-full overflow-hidden rounded-xl">
           <Image

@@ -1,23 +1,27 @@
 import { Button } from "../../Widgets/Button";
 import Image from "next/image";
+import { useTranslation } from "next-i18next";
+
 const BookAppointment = () => {
+  const { t } = useTranslation("common");
+
   return (
     <div className="f-ai-c mt-12 flex-wrap justify-between gap-8 rounded-2xl bg-grey-100 py-12 px-6 md:mx-8 md:px-16 lg:mt-20 lg:flex-nowrap lg:px-24">
       <div className="flex-1">
         <div className="absolute  -translate-y-1/4	">
           <Image src="/widgets/points.svg" alt="" width="143" height={"105"} />
         </div>{" "}
-        <h2 className="relative ml-8 ">Book an Appointment</h2>
+        <h2 className="relative ml-8 ">{t("book")}</h2>
       </div>
 
       <form className="z-10 flex  flex-1  flex-wrap gap-7">
         <div className="flex flex-1 flex-col gap-7">
-          <input type="text" placeholder="Your Name..." required />
+          <input type="text" placeholder={t("name")} required />
           <input type="date" required />
         </div>
         <div className="flex flex-1 flex-col gap-7">
-          <input type="email" placeholder="Your Email..." required />
-          <Button text="Book Now" tw={"flex-1"} />
+          <input type="email" placeholder={t("email")} required />
+          <Button text={t("bookBtn")} tw={"flex-1"} />
         </div>
       </form>
       <style jsx>

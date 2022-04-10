@@ -7,10 +7,13 @@ import Logo from "../Widgets/Logo";
 const Header = () => {
   const router = useRouter();
   const divNav = useRef();
+  let menuItems = ["Dr.Nahas", "Home", "Gallery", "Services", "Booking"];
+  if (router.locale === "ar")
+    menuItems = [" د.نحاس", "الرئيسية", "الصور", "الخدمة", "الحجز"];
   return (
     <header ref={divNav} className=" bg-grey-100 ">
       <div className="main f-ai-c  w-full justify-between gap-2">
-        <Logo />
+        <Logo name={menuItems[0]} />
         <nav className="">
           <ul className="f-ai-c gap-6 font-bold text-light sm:gap-10">
             <li
@@ -19,7 +22,7 @@ const Header = () => {
                 divNav.current.classList.remove("nav-open");
               }}
             >
-              <Link href="/">Home</Link>
+              <Link href="/">{menuItems[1]}</Link>
             </li>
 
             <li
@@ -28,7 +31,7 @@ const Header = () => {
                 divNav.current.classList.remove("nav-open");
               }}
             >
-              <Link href="/gallery">Gallery</Link>
+              <Link href="/gallery">{menuItems[2]}</Link>
             </li>
             <li
               className={`${router.pathname == "/services" ? "active" : ""}`}
@@ -36,7 +39,7 @@ const Header = () => {
                 divNav.current.classList.remove("nav-open");
               }}
             >
-              <Link href="/services">Services</Link>
+              <Link href="/services">{menuItems[3]}</Link>
             </li>
             <li
               className={`${router.pathname == "/booking" ? "active" : ""}`}
@@ -44,7 +47,7 @@ const Header = () => {
                 divNav.current.classList.remove("nav-open");
               }}
             >
-              <Link href="/booking">Booking</Link>
+              <Link href="/booking">{menuItems[4]}</Link>
             </li>
           </ul>
         </nav>
@@ -52,14 +55,17 @@ const Header = () => {
           <div className={" f-ai-c  only-desktop"}>
             <Image src={"/icons/dubai.png"} width={73} height={28} />
           </div>
-          <select
-            name="language"
-            id=""
-            className="languages bg-transparent px-2 py-1"
-          >
-            <option value="en">English</option>
-            <option value="ar">Arabic</option>
-          </select>
+          <button className="languages cursor-pointer bg-transparent px-2 py-1 hover:text-[#F89B1B] active:scale-110">
+            {router.locale == "ar" ? (
+              <Link href={router.asPath} locale="en">
+                <a> English</a>
+              </Link>
+            ) : (
+              <Link href={router.asPath} locale="ar">
+                <a> العربية</a>
+              </Link>
+            )}
+          </button>
         </div>
         <button
           className="nav-btn"

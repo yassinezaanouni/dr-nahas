@@ -18,26 +18,36 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 
 import { AnimatePresence, motion } from "framer-motion";
+import { useTranslation } from "next-i18next";
 
 const ServicesCards = ({ isServicePage = false }) => {
+  const { t } = useTranslation("index");
+
   const [dropNumber, setDropNumber] = useState(1);
 
   const router = useRouter();
   return (
     <section className="f-ai-c  relative flex-col justify-center" id="services">
-      <div className="absolute inset-0 left-0 -z-10 w-[200vw] -translate-x-1/2 bg-grey-100"></div>
-      <div className="f-ai-c my-4 w-full justify-between px-6 md:my-8 md:mx-8 md:px-16  lg:mb-16 lg:px-24">
+      <div
+        className={`absolute inset-0 left-0 -z-10 w-[200vw] ${
+          router.locale == "ar" ? "translate-x-1/2" : "-translate-x-1/2"
+        } bg-grey-100`}
+      ></div>
+      <div
+        className={`f-ai-c my-4 w-full justify-between px-6 md:my-8 md:mx-8 ${
+          isServicePage ? "md:justify-center" : ""
+        } md:px-16  lg:mb-16 lg:px-24`}
+      >
         <h2 className="text-center">
-          Our Dental <span>Services</span>
+          {t("servicesHeader").split(" ").slice(0, -1).join(" ")}
+          <span> {t("servicesHeader").split(" ").slice(-1).join(" ")} </span>
         </h2>
         <Link href={"/services/#services"}>
           <div>
             <Button
-              text={"Viewd All"}
+              text={t("servicesBtn")}
               tw={`${
-                isServicePage
-                  ? "hidden"
-                  : "mt-8  hidden md:block whitespace-nowrap"
+                isServicePage ? "hidden" : " hidden md:block whitespace-nowrap"
               } `}
             />
           </div>
@@ -47,7 +57,7 @@ const ServicesCards = ({ isServicePage = false }) => {
         slidesPerView={"auto"}
         spaceBetween={30}
         grabCursor={true}
-        className="servicesSwiper text-left "
+        className="servicesSwiper  text-start  "
       >
         <SwiperSlide
           onClick={() => {
@@ -59,10 +69,8 @@ const ServicesCards = ({ isServicePage = false }) => {
           <ServiceCard
             isSelected={dropNumber === 1 && isServicePage}
             image="/img/services/service1.webp"
-            title={"Digital smile Design"}
-            desc={
-              "What is it? Design an approximate image of the dimensions of the teeth length, width and shape before obtaining the final prosthesis result"
-            }
+            title={t("service1")}
+            desc={t("service1Desc")}
           />
         </SwiperSlide>
         <SwiperSlide
@@ -75,10 +83,8 @@ const ServicesCards = ({ isServicePage = false }) => {
           <ServiceCard
             isSelected={dropNumber === 2 && isServicePage}
             image="/img/services/service2.webp"
-            title={"Root canal treatment"}
-            desc={
-              "Attention Root canal treatment is not painful, if we anesthetize the tooth correctly"
-            }
+            title={t("service2")}
+            desc={t("service2Desc")}
           />
         </SwiperSlide>
         <SwiperSlide
@@ -91,10 +97,8 @@ const ServicesCards = ({ isServicePage = false }) => {
           <ServiceCard
             isSelected={dropNumber === 3 && isServicePage}
             image="/img/services/service3.webp"
-            title={"Teeth Whitening"}
-            desc={
-              "Teeth Whitening is a procedure that helps in changing the teeth color from the present shade to a brighter one, for getting a nicer look and color"
-            }
+            title={t("service3")}
+            desc={t("service3Desc")}
           />
         </SwiperSlide>{" "}
         <SwiperSlide
@@ -107,10 +111,8 @@ const ServicesCards = ({ isServicePage = false }) => {
           <ServiceCard
             isSelected={dropNumber === 5 && isServicePage}
             image="/img/services/service4.webp"
-            title={"Tooth Filling"}
-            desc={
-              "We do tooth filling when we have Broken Tooth and Dental Caries"
-            }
+            title={t("service4")}
+            desc={t("service4Desc")}
           />
         </SwiperSlide>
         <SwiperSlide
@@ -123,14 +125,13 @@ const ServicesCards = ({ isServicePage = false }) => {
           <ServiceCard
             isSelected={dropNumber === 4 && isServicePage}
             image="/img/services/service5.webp"
-            title={"Veneers "}
-            desc={
-              "Lets make it clear,hollywood smile, veneers, luminers, 3d smil all these names Represents the same procedure, but different commercial names"
-            }
+            title={t("service5")}
+            desc={t("service5Desc")}
           />
         </SwiperSlide>
       </Swiper>
-      {dropNumber === 1 && (
+
+      {isServicePage && dropNumber === 1 && (
         <motion.div
           key="dropdown1"
           initial={{ translateX: "-100vw", opacity: 0 }}
@@ -142,7 +143,7 @@ const ServicesCards = ({ isServicePage = false }) => {
         </motion.div>
       )}
 
-      {dropNumber === 2 && (
+      {isServicePage && dropNumber === 2 && (
         <motion.div
           key="dropdown2"
           initial={{ translateX: "-100vw", opacity: 0 }}
@@ -153,7 +154,7 @@ const ServicesCards = ({ isServicePage = false }) => {
           <DropDown2 />
         </motion.div>
       )}
-      {dropNumber === 3 && (
+      {isServicePage && dropNumber === 3 && (
         <motion.div
           key="dropdown3"
           initial={{ translateX: "-100vw", opacity: 0 }}
@@ -164,7 +165,7 @@ const ServicesCards = ({ isServicePage = false }) => {
           <DropDown3 />
         </motion.div>
       )}
-      {dropNumber === 4 && (
+      {isServicePage && dropNumber === 4 && (
         <motion.div
           key="dropdown4"
           initial={{ translateX: "-100vw", opacity: 0 }}
@@ -175,7 +176,7 @@ const ServicesCards = ({ isServicePage = false }) => {
           <DropDown4 />
         </motion.div>
       )}
-      {dropNumber === 5 && (
+      {isServicePage && dropNumber === 5 && (
         <motion.div
           key="dropdown5"
           initial={{ translateX: "-100vw", opacity: 0 }}
@@ -188,7 +189,7 @@ const ServicesCards = ({ isServicePage = false }) => {
       )}
       <Link href="/services/#services">
         <div className={`${isServicePage ? "hidden" : ""}`}>
-          <Button text={"View All"} tw={`  mt-8 md:hidden `} />
+          <Button text={t("serviceBtn")} tw={`  mt-8 md:hidden `} />
         </div>
       </Link>
     </section>

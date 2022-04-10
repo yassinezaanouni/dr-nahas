@@ -1,13 +1,15 @@
 import AnimatedNumber from "react-animated-number";
+import { useTranslation } from "next-i18next";
 
 const Stats = () => {
+  const { t } = useTranslation("services");
   return (
     <>
       <div className="">
         <div className="items-container justify-center gap-6 lg:justify-between">
-          <Item number={500} title="Satisfied Patients" symbol="+" />
-          <Item number={400} title="Positive Reviews" symbol="+" />
-          <Item number={98} title="Treatment Success" symbol="%" />
+          <Item number={500} title={t("stats1")} symbol="+" />
+          <Item number={400} title={t("stats2")} symbol="+" />
+          <Item number={98} title={t("stats3")} symbol="%" />
         </div>
       </div>
 

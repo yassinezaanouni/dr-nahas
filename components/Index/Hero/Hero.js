@@ -5,7 +5,7 @@ import MainHero from "./MainHero";
 const Hero = () => {
   return (
     <section>
-      <FloatingInfo title={"Disc 50%"} />
+      {/* <FloatingInfo title={"Disc 50%"} /> */}
       <MainHero />
       <BookAppointment />
     </section>

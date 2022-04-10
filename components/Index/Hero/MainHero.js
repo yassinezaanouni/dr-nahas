@@ -1,24 +1,33 @@
 import Image from "next/image";
 import { Button } from "../../Widgets/Button";
 import FloatingCard from "../../Widgets/Index/FloatingCard";
+
+import { useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
 const MainHero = () => {
+  const { t } = useTranslation("index");
+  const router = useRouter();
   return (
     <div className="gap-y  mt-2 flex flex-wrap items-center justify-between gap-x-12 lg:-mt-1">
       <div className=" flex-1">
         <h1 className=" relative mt-3 max-w-[15ch] ">
-          We Are Ready to Help Your Dental Problems
+          {t("hero")}
           <div className="absolute bottom-1/2 right-0 -z-10 h-28 w-28 translate-y-1/2 rounded-full bg-primary blur-[150px] md:blur-[110px]"></div>
         </h1>
 
-        <Button text={"Discover"} tw={" mb-8 mt-4 lg:my-8"} />
+        <Button text={t("heroBtn")} tw={" mb-8 mt-4 lg:my-8"} />
       </div>
       <div className=" img-container">
         <div className=" relative  justify-self-end">
-          <div className="only-desktop absolute bottom-0 z-10  -translate-x-1/2  -translate-y-1/2 ">
+          <div
+            className={`only-desktop absolute bottom-0 z-10  ${
+              router.locale == "ar" ? "translate-x-1/2" : "-translate-x-1/2"
+            }  -translate-y-1/2 `}
+          >
             <FloatingCard
               icon="/icons/happy-patients.svg"
               number={500}
-              text="Happy Patients"
+              text={t("heroCard")}
             />
           </div>
           <div className="  absolute -z-10 -translate-x-1/2 -translate-y-1/2	">

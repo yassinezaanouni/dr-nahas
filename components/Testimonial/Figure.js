@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const Figure = ({ author, text, rating, image }) => {
   return (
-    <figure className=" f-ai-c flex-wrap justify-center gap-8 text-center lg:justify-between lg:text-left">
+    <figure className=" f-ai-c lg: text-start  flex-wrap justify-center gap-8 text-center lg:justify-between">
       <figcaption>
         <blockquote>
           <h2 className="relative max-w-[22ch] lg:max-w-[14ch] macbook:max-w-[22ch]">

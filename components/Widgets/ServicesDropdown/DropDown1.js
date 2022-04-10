@@ -1,16 +1,16 @@
 import Image from "next/image";
 
+import { useTranslation } from "next-i18next";
 const DropDown1 = () => {
+  const { t } = useTranslation("dropDown1");
+
   return (
-    <div className="f-ai-c mt-12 flex-col gap-12 text-left md:gap-16 lg:mt-20 lg:gap-16">
+    <div className="f-ai-c  text-start  mt-12 flex-col gap-12 md:gap-16 lg:mt-20 lg:gap-16">
       <div className="flex-container">
         <div className="left">
-          <h2 className="text-primary">Digital smile Design </h2>
-          <h3 className="font-bold text-grey-200">What is it?</h3>
-          <p>
-            Design an approximate image of the dimensions of the teeth length,
-            width and shape before obtaining the final prosthesis result
-          </p>
+          <h2 className="text-primary">{t("h1")} </h2>
+          <h3 className="font-bold text-grey-200">{t("h2")}</h3>
+          <p>{t("p1")} </p>
         </div>
         <div className="right relative h-[21.75rem] w-full overflow-hidden rounded-xl">
           <Image
@@ -23,17 +23,14 @@ const DropDown1 = () => {
 
       <div className="flex-container flex-row-reverse">
         <div className="left">
-          <h3 className="font-bold text-grey-200">How it works?</h3>
-          <p>
-            Analysis of facial proportions and teeth using high-resolution
-            digital images and videos, and a normal or 3D dental impression
-          </p>
-          <h4>4 determinants of smile design</h4>
+          <h3 className="font-bold text-grey-200">{t("h3")}</h3>
+          <p>{t("p2")}</p>
+          <h4>{t("h4")}</h4>
           <ul>
-            <li>-Face</li>
-            <li>-Lips</li>
-            <li>-Gingiva</li>
-            <li>-Teeth</li>
+            <li>{t("li1")}</li>
+            <li>{t("li2")}</li>
+            <li>{t("li3")}</li>
+            <li>{t("li4")}</li>
           </ul>
         </div>
         <div className="right relative h-[21.75rem] w-full overflow-hidden rounded-xl">
@@ -48,47 +45,26 @@ const DropDown1 = () => {
         <div className="left">
           <ol>
             <li>
-              <h5>1. Face Analysis</h5>
-              <p>
-                Determining the inter pupillary line, the dental midline, which
-                defined as the vertical line drawn parallel to the lateral
-                border of the esthetic frame through the tip of the incisal
-                embrasure between the two maxillary central incisors
-              </p>
+              <h5>{t("h5")}</h5>
+              <p>{t("p3")}</p>
             </li>
 
             <li>
-              <h5>2. Lip Line</h5>
-              <p>
-                to have the most pleasant smile we usually looking forward a
-                smile that shows teeth and 1-2 mm of interdental papilla
-              </p>
-              <p>
-                {
-                  "Low lip line : ( < 75%) of teeth are visible Average or Medium: (75-100%) of teeth & less than 1mm gingival margin High lip line: ( > 75%) of the visible gingiva and least 2-3 mm"
-                }
-              </p>
+              <h5>{t("h6")}</h5>
+              <p>{t("p4")}</p>
+              <p>{t("p5")}</p>
             </li>
             <li>
-              <h5>3.Gingival Line</h5>
-              <p>
-                Symmetry of the gingival margins, gingival zenith line and
-                interdental papilla is crucial for esthetics, specially in the
-                high lip line patients
-              </p>
+              <h5>{t("h7")}</h5>
+              <p>{t("p6")}</p>
             </li>
             <li>
-              <h5>4. Teeth Symmetry</h5>
-              <p>
-                The golden proportion is that if we take the lateral incisor as
-                a factor of 1, then the central incisor would be 1.6. The
-                visible part of that canine, usually the mesial part of the
-                canine in that front photographic view, would be 0.6
-              </p>
+              <h5>{t("h8")}</h5>
+              <p>{t("p7")}</p>
             </li>
           </ol>
         </div>
-        <div className="right relative h-[21.75rem] w-full overflow-hidden rounded-xl">
+        <div className="right relative h-[28.75rem] w-full overflow-hidden rounded-xl">
           <Image
             src="/img/services/dropdown/1.jpg"
             alt="Digital smile Design"

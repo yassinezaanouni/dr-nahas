@@ -2,30 +2,28 @@ import { Button } from "../../Widgets/Button";
 import WorkHours from "./WorkHours";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslation } from "next-i18next";
 
 const Hours = () => {
+  const { t } = useTranslation("common");
   return (
     <section className="f-ai-c w-full flex-wrap justify-center gap-4 gap-y-10 lg:justify-between  macbook:justify-start ">
       <div className="left flex flex-col gap-7 lg:basis-[45%] macbook:basis-[60%] ">
         <h2 className=" relative max-w-[20ch]">
-          Fully Dedicated To Your<span> Dental Health</span>
+          {t("headerStar").split(" ").slice(0, -2).join(" ")}
+          <span> {t("headerStar").split(" ").slice(-2).join(" ")}</span>
           <div className="absolute bottom-1/2 right-0 -z-10 h-28 w-28 translate-y-1/2 rounded-full bg-primary blur-[150px] md:blur-[100px]"></div>
         </h2>
-        <p className="text-light sm:max-w-[60ch]">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolut labore et dolut
-          labore et dol ut labore et dolut labore et dol ore magna aliquyam
-          erat, sed diam voluptua. At verout labore .
-        </p>
+        <p className="text-light sm:max-w-[60ch]">{t("starDesc")}</p>
         <div className=" mx-auto max-w-[33rem] rounded-xl bg-[#8993A8]/5 p-4 text-center md:px-12 lg:mx-0">
           <h3>
-            5 Star
-            <span className="text-primary"> Rating From Our Patients</span>
+            5 {t("star")}
+            <span className="text-primary"> {t("starRating")}</span>
           </h3>
         </div>
         <Link href={"/booking"}>
           <div className="mx-auto max-w-[16rem] lg:mx-0">
-            <Button text="Book Appointment" tw="" />
+            <Button text={t("bookBtn")} tw="" />
           </div>
         </Link>
       </div>

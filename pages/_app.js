@@ -1,8 +1,12 @@
 import Layout from "../components/Layout/Layout";
 import "../styles/globals.css";
 import Head from "next/head";
+import { appWithTranslation } from "next-i18next";
+import { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps }) {
+  const router = useRouter();
+
   return (
     <>
       <Head>
@@ -26,11 +30,11 @@ function MyApp({ Component, pageProps }) {
         />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
-      <Layout>
+      <Layout dir={router.locale === "ar" ? "rtl" : "ltr"}>
         <Component {...pageProps} />
       </Layout>
     </>
   );
 }
 
-export default MyApp;
+export default appWithTranslation(MyApp);

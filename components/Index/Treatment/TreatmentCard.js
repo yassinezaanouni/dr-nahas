@@ -71,7 +71,7 @@ const TreatmentCard = ({ title, image, icon }) => {
           {`
             @media (hover: none) {
               .card {
-                transform: translateY(100% + 1.25rem);
+                opacity: 0.8;
               }
             }
           `}

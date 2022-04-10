@@ -17,7 +17,7 @@ const Dropdown = ({
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="text-left">
+    <div className=" text-start ">
       <div
         className="f-ai-c max-w-fit cursor-pointer gap-4 "
         onClick={() => {

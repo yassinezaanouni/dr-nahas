@@ -1,37 +1,17 @@
 import Image from "next/image";
+import { useTranslation } from "next-i18next";
 
 const DropDown5 = () => {
+  const { t } = useTranslation("dropDown5");
   return (
-    <div className="f-ai-c mt-12 flex-col gap-12 text-left md:gap-16 lg:mt-20 lg:gap-16">
+    <div className="f-ai-c  text-start  mt-12 flex-col gap-12 md:gap-16 lg:mt-20 lg:gap-16">
       <div className="flex-container">
         <div className="left">
-          <h2 className="text-primary">Tooth Filling</h2>
-          <p>We do tooth filling when we have Broken Tooth and Dental Caries</p>
-          <p className="text-[#F89B1B]">1-Composite</p>
-          <p>
-            They are made from a blend of non-toxic, tooth coloured plastic and
-            powdered glass. They are used for dental restoration of fractured or
-            decayed teeth
-          </p>{" "}
-          <p className="text-[#F89B1B]">2-Amalgam</p>
-          <p>
-            Is a mixture of metals, consisting of liquid (elemental) mercury
-            (50%) and a powdered alloy composed of silver, tin, and copper. Its
-            use has been reduced recently for its obvious look inside the mouth
-            and discoloration of the tooth.
-          </p>{" "}
-          <p className="text-[#F89B1B]">3-Ceramic</p>
-          <p>
-            Inlay or onlay made from lithium disilicate material, which is known
-            for its excellent strength and aesthetics
-          </p>{" "}
-          <p className="text-[#F89B1B]">4-Gold</p>
-          <p>
-            Fillings made from pure gold or combined gold with other metals,
-            such as palladium, nickel, or chromium. They are characterized by
-            strong durability & stiffness, and some prefer them for the
-            appearance
-          </p>{" "}
+          <h2 className="text-primary">{t("h1")}</h2>
+          <p>{t("p1")}</p>
+          <p className="text-[#F89B1B]">{t("p2")}</p>
+          <p>{t("p3")}</p> <p className="text-[#F89B1B]">{t("p4")}</p>
+          <p>{t("p5")}</p>
         </div>
         <div className="right relative h-[26.75rem] w-full overflow-hidden rounded-xl">
           <Image
@@ -44,18 +24,11 @@ const DropDown5 = () => {
 
       <div className="flex-container flex-row-reverse">
         <div className="left">
-          <h3 className="font-bold text-grey-200">Treatment sequence </h3>
-          <p>
-            1-Finding Tooth cavity by checking inra oral and taking x-rays to
-            detect the decay
-          </p>
-          <p>2-Caries removal by special inustremnts </p>
-          <p>3-Having a good isolation and placing final filling</p>
-          <p>
-            4-Finishing and polishing final restoration and checking occlusion{" "}
-          </p>
+          <p className="text-[#F89B1B]">{t("p6")}</p>
+          <p>{t("p7")}</p> <p className="text-[#F89B1B]">{t("p8")}</p>
+          <p>{t("p9")}</p>
         </div>
-        <div className="right relative h-[21.75rem] w-full overflow-hidden rounded-xl">
+        <div className="right relative h-[26.75rem] w-full overflow-hidden rounded-xl">
           <Image
             src="/img/services/dropdown/16.jpg"
             alt="Digital smile Design"
@@ -63,14 +36,24 @@ const DropDown5 = () => {
           />
         </div>
       </div>
-
-      <div className="important mt-8 w-full   md:mt-12">
-        <h4 className="mb-4 font-bold text-[#F48211]">Important</h4>
-        <p>
-          If the tooth is treated incorrectly, it may cause discomfort during
-          biting, sensitivity and inflammation of the gums
-        </p>
+      <div className="flex-container ">
+        <div className="left">
+          <h3 className="font-bold text-grey-200">{t("h3")} </h3>
+          <p>{t("p14")}</p>
+        </div>
+        <div className="right relative h-[27.75rem] w-full overflow-hidden rounded-xl">
+          <Image
+            src="/img/services/dropdown/new1.jpeg"
+            alt="Digital smile Design"
+            layout="fill"
+          />
+        </div>
       </div>
+
+      {/* <div className="important mt-8 w-full   md:mt-12">
+        <h4 className="mb-4 font-bold text-[#F48211]">{t("h4")}</h4>
+        <p>{t("p14")}</p>
+      </div> */}
       <style jsx>
         {`
           .flex-container {

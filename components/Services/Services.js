@@ -3,12 +3,14 @@ import ServicesCards from "../Index/Services/ServicesCards";
 import BookAppointement from "../Widgets/BookAppointement";
 import ServicesDropdowns from "../Widgets/ServicesDropdown/ServicesDropdowns";
 import Stats from "./Stats";
+import { useTranslation } from "next-i18next";
 
 const Services = () => {
+  const { t } = useTranslation("services");
   return (
     <>
       <section className=" gap-5 text-center">
-        <h1 className="relative  mx-auto mb-8 max-w-[25ch]  md:mb-12">
+        <h1 className="relative  mx-auto mb-8   md:mb-12">
           <div className="  absolute -z-10  translate-y-1/2 translate-x-1/2 	">
             <Image
               src="/widgets/points.svg"
@@ -17,7 +19,7 @@ const Services = () => {
               height={"105"}
             />
           </div>
-          Many Moments That we Capture in Dr.Nahas Clinic
+          {t("h1")}
           <div className="absolute bottom-1/2 right-1/4 -z-10 h-32 w-32 translate-y-1/2 rounded-full bg-primary blur-[150px] md:blur-[100px]"></div>
         </h1>
         <div className="relative z-20 mx-auto h-[14.75rem] w-full overflow-hidden rounded-2xl md:h-[25.75rem] macbook:h-[47.75rem]">
@@ -28,7 +30,7 @@ const Services = () => {
           />
         </div>
 
-        <div className="mt-16 md:text-left">
+        <div className="md: text-start  mt-16">
           <ServicesCards
             isServicePage={true}
             // setDropNumber={setDropNumber}

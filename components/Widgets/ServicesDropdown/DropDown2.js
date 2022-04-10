@@ -1,15 +1,16 @@
 import Image from "next/image";
+import { useTranslation } from "next-i18next";
+
 const DropDown2 = () => {
+  const { t } = useTranslation("dropDown2");
+
   return (
-    <div className="f-ai-c mt-12 flex-col gap-12 text-left md:gap-16 lg:mt-20 lg:gap-16">
+    <div className="f-ai-c  text-start  mt-12 flex-col gap-12 md:gap-16 lg:mt-20 lg:gap-16">
       <div className="flex-container">
         <div className="left">
-          <h2 className="text-primary">ROOT CANAL TREATMENT </h2>
-          <h3 className="font-bold text-[#F89B1B]">Attention</h3>
-          <p>
-            Root canal treatment is not painful, if we anesthetize the tooth
-            correctly
-          </p>
+          <h2 className="text-primary">{t("h1")} </h2>
+          <h3 className="font-bold text-[#F89B1B]">{t("h2")}</h3>
+          <p>{t("p1")} </p>
         </div>
         <div className="right relative h-[21.75rem] w-full overflow-hidden rounded-xl">
           <Image
@@ -22,15 +23,16 @@ const DropDown2 = () => {
 
       <div className="flex-container flex-row-reverse">
         <div className="left">
-          <h3 className="font-bold text-grey-200">What is a tooth nerve?</h3>
-          <p>
-            It is a bundle of nerves and blood vessels at the center of the
-            tooth
-          </p>
-          <h4>Causes of pain </h4>
+          <h3 className="font-bold text-grey-200">{t("h3")}</h3>
+          <p>{t("p2")}</p>
+          <h4>{t("h4")} </h4>
           <ul>
-            <li>1.Deep caries reaching the nerve</li>
-            <li>2.Severe tooth fracture reaching the nerve</li>
+            <li>
+              <p className="">{t("p3")}</p>
+            </li>
+            <li>
+              <p className="">{t("p4")}</p>
+            </li>
           </ul>
         </div>
         <div className="right relative h-[21.75rem] w-full overflow-hidden rounded-xl">
@@ -43,42 +45,32 @@ const DropDown2 = () => {
       </div>
       <div className="flex-container">
         <div className="left">
-          <h3 className="font-bold text-grey-200">How is it done?</h3>
-          <h4 className="font-bold">Treatment</h4>
+          <h3 className="font-bold text-grey-200">{t("h5")}</h3>
+          <h4 className="font-bold">{t("h6")}</h4>
           <ol>
             <li>
-              <p>1 - Removal of the nerve & infected tissue completely</p>
+              <p>{t("p5")}</p>
             </li>
 
             <li>
-              <p>
-                2 - Determine canals lengths & cleaning and shaping root canal
-              </p>
+              <p>{t("p6")}</p>
             </li>
             <li>
               <p>
-                3 - Filling the canals with special material till the end of the
+                {t("p7")}
                 root
               </p>
             </li>
             <li>
-              <p>4 - Ensure that the tooth surface is sealed completely</p>
+              <p>{t("p8")}</p>
             </li>
           </ol>
-          <h4>Procedure</h4>
-          <p className="text-[#F89B1B] ">Old School</p>
-          <p>
-            Using endodontics file to remove bacteria and enlarge tooth canals
-          </p>
-          <p className="text-[#F89B1B] ">New school</p>
-          <p>
-            Using rotary device to remove bacteria and enlarge tooth canals
-          </p>{" "}
-          <p className="text-[#F89B1B] ">Negative treatment</p>
-          <p>
-            Dental Abscess containing pus Lesion containing bacteria under the
-            tip of the root
-          </p>
+          <h4>{t("h7")}</h4>
+          <p className="treatment-methods ">{t("p9")}</p>
+          <p>{t("p10")}</p>
+          <p className="treatment-methods ">{t("p11")}</p>
+          <p>{t("p12")}</p> <p className="treatment-methods ">{t("p13")}</p>
+          <p>{t("p14")}</p>
         </div>
         <div className="right relative h-[28.75rem] w-full overflow-hidden rounded-xl">
           <Image
@@ -90,21 +82,8 @@ const DropDown2 = () => {
       </div>
       <div className="flex-container flex-row-reverse">
         <div className="left">
-          <h3 className="font-bold text-grey-200">Dental Implant</h3>
-          <p>
-            You went to the dentist to check a tooth that was causing constant
-            pain. The doctor took the necessary x-rays and examined the tooth,
-            he found that the tooth was unrestorable and it needed extraction.
-            What should you do after extracting the tooth? or when you have a
-            missing tooth?
-          </p>{" "}
-          <p>
-            Dental implants are one of the best and most advanced solutions for
-            replacing missing teeth. A titanium implant is placed in the bone;
-            it acts as the tooth root and fuses to the surrounding bone. Then
-            the crown is placed on it to take the role of the tooth in shape and
-            function.
-          </p>
+          <h3 className="font-bold text-grey-200">{t("h8")}</h3>
+          <p>{t("p15")}</p> <p>{t("p16")}</p>
         </div>
         <div className="right relative h-[28.75rem] w-full overflow-hidden rounded-xl">
           <Image
@@ -142,6 +121,9 @@ const DropDown2 = () => {
           }
           li > p {
             @apply my-0 mb-5;
+          }
+          .treatment-methods {
+            @apply text-[#F89B1B];
           }
         `}
       </style>

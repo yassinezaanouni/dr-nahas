@@ -1,9 +1,9 @@
 import Footer from "./Footer";
 import Header from "./Header";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, dir }) => {
   return (
-    <div>
+    <div dir={dir} className="dirDiv">
       <Header />
       <main className="">{children}</main>
       <Footer />

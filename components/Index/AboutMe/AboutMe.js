@@ -1,7 +1,12 @@
 import Image from "next/image";
 import BluredDiv from "../../Widgets/BluredDiv";
 import FloatingCard from "../../Widgets/Index/FloatingCard";
+import { useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
+
 const AboutMe = () => {
+  const router = useRouter();
+  const { t } = useTranslation("index");
   return (
     <section className="f-ai-c flex-wrap gap-4 2xl:items-start 2xl:gap-x-20">
       <div className="relative aspect-square w-[37rem]">
@@ -18,9 +23,11 @@ const AboutMe = () => {
         <FloatingCard
           icon="/icons/heart.svg"
           number={7}
-          text="Years Experience"
+          text={t("expCard")}
           isInverted={true}
-          tw={"absolute text-light left-0   md:-translate-x-1/4"}
+          tw={`absolute text-light left-0   ${
+            router.locale == "ar" ? "md:translate-x-1/5" : "-translate-x-1/4"
+          }`}
           tw2={
             "absolute top-0 right-0 -translate-y-1/2 -translate-x-1/2 md:-translate-x-full w-[36px] aspect-square md:w-[51px] "
           }
@@ -28,10 +35,12 @@ const AboutMe = () => {
         <FloatingCard
           icon="/icons/happy-patients.svg"
           number={500}
-          text="Happy Patients"
-          tw={
-            "absolute bottom-0 z-10  translate-x-1/4 md:translate-x-1/2  -translate-y-1/2 "
-          }
+          text={t("heroCard")}
+          tw={`absolute bottom-0 z-10  translate-x-1/4 ${
+            router.locale === "ar"
+              ? "md:-translate-x-1/2"
+              : "md:translate-x-1/2"
+          } -translate-y-1/2 `}
           tw2={" h-[17.24px] w-[24.62px] md:h-[29px] md:w-[41.5px]"}
         />
         <div className="mx-auto h-[87%] w-[87%] rounded-full bg-primary/20"></div>
@@ -41,18 +50,15 @@ const AboutMe = () => {
           <Image src="/widgets/points.svg" alt="" width="143" height={"105"} />
         </div>
         <h2 className="mb-6">
-          <span>Find Out</span> More About <br /> Dr.Nahas
+          <span>{t("aboutHeader").split(" ").slice(0, 2).join(" ")} </span>
+
+          {t("aboutHeader")
+            .split(" ")
+            .slice(2, t("aboutHeader").length)
+            .join(" ")}
         </h2>
-        <p className="leading-relaxed text-light	">
-          Dr. AbdulRahman Nahas <br /> Cosmetic and Preventive Dentistry <br />
-          Dr. Nahas has graduated with a Bachelor Degree in Dental Surgery and
-          he has Fellowship in Endodontics (Dubai - UAE). <br /> He is highly
-          experienced in Digital Smile Design (DSD), Root Canal Treatment,
-          Cosmetic, laser and preventive Dentistry. <br /> He believes that
-          everyone deserves to have a healthy, natural, and unique smile. <br />{" "}
-          He has worked in multiple private and governmental clinics and
-          hospitals in the gulf region, prior to joining Levantine Dental Clinic
-          - Dubai.
+        <p className="whitespace-pre-line leading-relaxed text-light	">
+          {t("aboutP")}
         </p>
       </div>
     </section>

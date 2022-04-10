@@ -67,6 +67,10 @@ section img {
 section:last-of-type {
   @apply mb-5 sm:mb-10 lg:mb-16;
 }
+
+.text-start {
+  text-align: start;
+}
 /** FLEX **/
 .f-ai-c {
   display: flex;
@@ -135,6 +139,14 @@ section:last-of-type {
   right: 5rem;
 }
 
+/** RTL **/
+.momentsSwiper.swiper-rtl .swiper-button-prev {
+  right: 0rem !important;
+}
+.momentsSwiper.swiper-rtl .swiper-button-next {
+  right: 4rem !important;
+}
+
 .momentsSwiper .swiper-button-next:after,
 .momentsSwiper .swiper-button-prev:after {
   font-size: 1rem;
@@ -144,6 +156,14 @@ section:last-of-type {
   transform: translateX(-0.1rem);
 }
 
+.momentsSwiper.swiper-rtl .swiper-button-next:after,
+.momentsSwiper.swiper-rtl .swiper-button-prev:after {
+  font-size: 1rem;
+  transform: translateX(-0.1rem);
+}
+.momentsSwiper.swiper-rtl .swiper-button-prev:after {
+  transform: translateX(0.1rem);
+}
 /*********************/
 
 /****** Figures Swiper *****/

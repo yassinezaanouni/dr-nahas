@@ -1,6 +1,5 @@
 import Image from "next/image";
 const ServiceCard = ({ image, title, desc, isSelected }) => {
-  console.log("isSelected", isSelected);
   return (
     <div
       className={`${
