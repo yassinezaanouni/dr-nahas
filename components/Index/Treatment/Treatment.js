@@ -7,7 +7,7 @@ const Treatment = ({ isVideo = true }) => {
 
   return (
     <section className="f-ai-c flex-col">
-      {isVideo && <MyVideo url="/treatment.mp4" />}
+      {isVideo && <MyVideo url="/home.mp4#t=3.5" />}
       <div className={` my-12 text-center ${isVideo ? "lg:my-20" : "mt-0"}`}>
         <h2 className="mb-4">{t("t1")}</h2>
         <p className="text-light">{t("t2")}</p>

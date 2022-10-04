@@ -13,11 +13,7 @@ const DropDown2 = () => {
           <p>{t("p1")} </p>
         </div>
         <div className="right relative h-[21.75rem] w-full overflow-hidden rounded-xl">
-          <Image
-            src="/img/services/dropdown/4.jpg"
-            alt="Digital smile Design"
-            layout="fill"
-          />
+          <Image src="/img/services/dropdown/4.webp" alt="Digital smile Design" layout="fill" />
         </div>
       </div>
 
@@ -36,11 +32,7 @@ const DropDown2 = () => {
           </ul>
         </div>
         <div className="right relative h-[21.75rem] w-full overflow-hidden rounded-xl">
-          <Image
-            src="/img/services/dropdown/5.jpg"
-            alt="Digital smile Design"
-            layout="fill"
-          />
+          <Image src="/img/services/dropdown/5.webp" alt="Digital smile Design" layout="fill" />
         </div>
       </div>
       <div className="flex-container">
@@ -73,11 +65,7 @@ const DropDown2 = () => {
           <p>{t("p14")}</p>
         </div>
         <div className="right relative h-[28.75rem] w-full overflow-hidden rounded-xl">
-          <Image
-            src="/img/services/dropdown/6.jpg"
-            alt="Digital smile Design"
-            layout="fill"
-          />
+          <Image src="/img/services/dropdown/6.webp" alt="Digital smile Design" layout="fill" />
         </div>
       </div>
       <div className="flex-container flex-row-reverse">
@@ -86,11 +74,7 @@ const DropDown2 = () => {
           <p>{t("p15")}</p> <p>{t("p16")}</p>
         </div>
         <div className="right relative h-[28.75rem] w-full overflow-hidden rounded-xl">
-          <Image
-            src="/img/services/dropdown/7.jpg"
-            alt="Digital smile Design"
-            layout="fill"
-          />
+          <Image src="/img/services/dropdown/7.jpg" alt="Digital smile Design" layout="fill" />
         </div>
       </div>
       <style jsx>

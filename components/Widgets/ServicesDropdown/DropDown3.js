@@ -14,11 +14,7 @@ const DropDown3 = () => {
           <p>{t("p2")}</p>
         </div>
         <div className="right relative h-[26.75rem] w-full overflow-hidden rounded-xl">
-          <Image
-            src="/img/services/dropdown/8.jpg"
-            alt="Digital smile Design"
-            layout="fill"
-          />
+          <Image src="/img/services/dropdown/8.jpg" alt="Digital smile Design" layout="fill" />
         </div>
       </div>
 
@@ -28,11 +24,7 @@ const DropDown3 = () => {
           <p className="whitespace-pre-line">{t("p3")}</p>
         </div>
         <div className="right relative h-[21.75rem] w-full overflow-hidden rounded-xl">
-          <Image
-            src="/img/services/dropdown/9.jpg"
-            alt="Digital smile Design"
-            layout="fill"
-          />
+          <Image src="/img/services/dropdown/9.webp" alt="Digital smile Design" layout="fill" />
         </div>
       </div>
       <div className="flex-container ">
@@ -46,11 +38,7 @@ const DropDown3 = () => {
           <p className="whitespace-pre-line">{t("p6")}</p>
         </div>
         <div className="right relative h-[21.75rem] w-full overflow-hidden rounded-xl">
-          <Image
-            src="/img/services/dropdown/10.jpg"
-            alt="Digital smile Design"
-            layout="fill"
-          />
+          <Image src="/img/services/dropdown/10.jpg" alt="Digital smile Design" layout="fill" />
         </div>
       </div>
       <style jsx>

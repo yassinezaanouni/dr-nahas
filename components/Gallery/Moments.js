@@ -19,18 +19,14 @@ const Moments = () => {
     "/img/moments/1.webp",
     "/img/moments/2.webp",
     "/img/moments/3.webp",
-    "/img/moments/1.webp",
-    "/img/moments/2.webp",
-    "/img/moments/3.webp",
-    "/img/moments/1.webp",
+    "/img/moments/4.webp",
+    "/img/moments/5.webp",
+    "/img/moments/6.webp",
+    "/img/moments/7.webp",
   ];
   return (
     <section>
-      <h2
-        className={` mb-6 max-w-[10ch] ${
-          router.locale == "ar" ? " mb-14" : ""
-        } md:mb-16 md:max-w-[30ch]`}
-      >
+      <h2 className={` mb-6 max-w-[10ch] ${router.locale == "ar" ? " mb-14" : ""} md:mb-16 md:max-w-[30ch]`}>
         {t("g3")}
       </h2>
       <Swiper
@@ -43,15 +39,10 @@ const Moments = () => {
         className="momentsSwiper"
       >
         {imgs.map((img, i) => {
-          console.log("img", img);
           return (
             <SwiperSlide key={i}>
               <div className="h-[18.75rem] w-full ">
-                <Image
-                  src={img}
-                  alt="moments doctor dentist day"
-                  layout="fill"
-                />
+                <Image src={img} alt="moments doctor dentist day" layout="fill" />
               </div>
             </SwiperSlide>
           );

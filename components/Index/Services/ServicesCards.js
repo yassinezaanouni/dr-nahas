@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 // import required modules
 import ServiceCard from "./ServiceCard";
@@ -50,7 +50,14 @@ const ServicesCards = ({ isServicePage = false }) => {
           </div>
         </Link>
       </div>
-      <Swiper slidesPerView={"auto"} spaceBetween={30} grabCursor={true} className="servicesSwiper  text-start  ">
+      <Swiper
+        slidesPerView={"auto"}
+        spaceBetween={30}
+        grabCursor={true}
+        navigation={true}
+        modules={[Navigation]}
+        className="servicesSwiper text-start  "
+      >
         <SwiperSlide
           onClick={() => {
             !isServicePage && router.push("/services?service=1#services");
@@ -95,7 +102,7 @@ const ServicesCards = ({ isServicePage = false }) => {
         </SwiperSlide>{" "}
         <SwiperSlide
           onClick={() => {
-            !isServicePage && router.push("/services?service=4#services");
+            !isServicePage && router.push("/services?service=5#services");
 
             setDropNumber(5);
           }}
@@ -109,7 +116,7 @@ const ServicesCards = ({ isServicePage = false }) => {
         </SwiperSlide>
         <SwiperSlide
           onClick={() => {
-            !isServicePage && router.push("/services?service=5#services");
+            !isServicePage && router.push("/services?service=4#services");
 
             setDropNumber(4);
           }}

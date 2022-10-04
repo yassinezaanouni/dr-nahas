@@ -16,11 +16,11 @@ const ShareLove = () => {
     "/img/testimonial/1.webp",
 
     "/img/testimonial/2.webp",
+    "/img/moments/1.webp",
     "/img/testimonial/3.webp",
-    "/img/testimonial/2.webp",
-    "/img/testimonial/1.webp",
-    "/img/testimonial/3.webp",
-    "/img/testimonial/2.webp",
+    "/img/moments/2.webp",
+    "/img/moments/6.webp",
+    "/img/moments/7.webp",
   ];
   return (
     <section className="relative py-10 sm:py-20 lg:py-32 ">
@@ -61,12 +61,7 @@ const ShareLove = () => {
             imgs.map((img, i) => (
               <SwiperSlide key={i}>
                 <div className="overflow-hidden rounded-xl">
-                  <Image
-                    src={img}
-                    width="340"
-                    height="285"
-                    alt="love clients moments"
-                  />
+                  <Image src={img} width="340" height="285" alt="love clients moments" />
                 </div>
               </SwiperSlide>
             ))}

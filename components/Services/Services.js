@@ -20,8 +20,8 @@ const Services = () => {
           {t("h1")}
           <div className="absolute bottom-1/2 right-1/4 -z-10 h-32 w-32 translate-y-1/2 rounded-full bg-primary blur-[150px] md:blur-[100px]"></div>
         </h1>
-        <div className="relative z-20 mx-auto h-[14.75rem] w-full overflow-hidden rounded-2xl md:h-[25.75rem] macbook:h-[47.75rem]">
-          <MyVideo url="/treatment.mp4" />
+        <div className="relative z-20 mx-auto w-full overflow-hidden rounded-2xl">
+          <MyVideo url="/treatment.mp4" poster="/thumbnail-treatment.webp" />
         </div>
 
         <div className="md: text-start  mt-16">

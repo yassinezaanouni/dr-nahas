@@ -1,7 +1,7 @@
 import React from "react";
 import { useRef, useState } from "react";
 
-const MyVideo = ({ url }) => {
+const MyVideo = ({ url, poster }) => {
   const myVideo = useRef();
   const [isPlaying, setIsPlaying] = useState(false);
   function playPause() {
@@ -33,7 +33,7 @@ const MyVideo = ({ url }) => {
           alt="play"
         />
       </button>
-      <video ref={myVideo} src={url} preload="metadata"></video>
+      <video ref={myVideo} src={url} poster={poster} preload="metadata"></video>
     </div>
   );
 };

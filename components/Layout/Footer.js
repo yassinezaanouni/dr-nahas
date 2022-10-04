@@ -50,31 +50,19 @@ const Footer = () => {
           <Logo name={[items[0]]} tw="justify-center md:justify-start" />
           <p className="max-w-[40ch] text-light">{items[1]}</p>
           <ul className="social-medias f-ai-c  gap-3">
-            <li className=" f-ai-c relative aspect-square w-10 justify-center rounded-full bg-primary/30 md:w-12">
+            <li className=" f-ai-c relative aspect-square w-10 cursor-pointer justify-center rounded-full bg-primary/30 hover:bg-primary/20 md:w-12">
               <Link href="#">
-                <Image
-                  src="/icons/social-media/fb.svg"
-                  width={18}
-                  height={18}
-                />
+                <Image src="/icons/social-media/fb.svg" width={18} height={18} />
               </Link>
             </li>
-            <li className=" f-ai-c relative aspect-square w-10 justify-center rounded-full bg-primary/30 md:w-12">
+            <li className=" f-ai-c relative aspect-square w-10 cursor-pointer justify-center rounded-full bg-primary/30 hover:bg-primary/20 md:w-12">
               <Link href="#">
-                <Image
-                  src="/icons/social-media/twitter.svg"
-                  width={18}
-                  height={18}
-                />
+                <Image src="/icons/social-media/youtube.svg" width={24} height={24} />
               </Link>
             </li>
-            <li className=" f-ai-c relative aspect-square w-10 justify-center rounded-full bg-primary/30 md:w-12">
+            <li className=" f-ai-c relative aspect-square w-10 cursor-pointer justify-center rounded-full bg-primary/30 hover:bg-primary/20 md:w-12">
               <Link href="#">
-                <Image
-                  src="/icons/social-media/instagram.svg"
-                  width={18}
-                  height={18}
-                />
+                <Image src="/icons/social-media/instagram.svg" width={18} height={18} />
               </Link>
             </li>
           </ul>
@@ -82,10 +70,21 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-medium">{items[2]}</h3>
           <ul className="">
-            <li>{items[3]}</li>
-            <li>{items[4]} </li>
-            <li>{items[5]} </li>
-            <li>{items[6]} </li> <li>{items[7]}</li>
+            <li>
+              <Link href="/services?service=1#services">{items[3]}</Link>
+            </li>
+            <li>
+              <Link href="/services?service=2#services">{items[4]}</Link>
+            </li>
+            <li>
+              <Link href="/services?service=3#services">{items[5]}</Link>
+            </li>
+            <li>
+              <Link href="/services?service=5#services">{items[6]}</Link>
+            </li>
+            <li>
+              <Link href="/services?service=4#services">{items[7]}</Link>
+            </li>
           </ul>
         </div>
         <div>
@@ -110,30 +109,15 @@ const Footer = () => {
           <h3 className="text-lg font-medium">{items[13]}</h3>
           <ul className="">
             <li className="f-ai-c  gap-6 ">
-              <Image
-                src="/icons/phone.svg"
-                layout="fixed"
-                width={18}
-                height={18}
-              />
+              <Image src="/icons/phone.svg" layout="fixed" width={18} height={18} />
               +971 54371 6446
             </li>
             <li className="hidden  items-center gap-6 md:flex">
-              <Image
-                src="/icons/clock.svg"
-                layout="fixed"
-                width={18}
-                height={18}
-              />
+              <Image src="/icons/clock.svg" layout="fixed" width={18} height={18} />
               {items[14]}
             </li>{" "}
             <li className="   hidden gap-6 md:flex">
-              <Image
-                src="/icons/location.svg"
-                layout="fixed"
-                width={18}
-                height={18}
-              />
+              <Image src="/icons/location.svg" layout="fixed" width={18} height={18} />
               <p>{items[15]}</p>
             </li>{" "}
           </ul>

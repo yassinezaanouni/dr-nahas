@@ -95,6 +95,50 @@ section:last-of-type {
 .servicesSwiper .swiper-slide {
   max-width: 259px;
 }
+.servicesSwiper .swiper-button-next,
+.servicesSwiper .swiper-button-prev {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px !important;
+  height: 30px !important;
+  background-color: var(--clr-primary);
+  border-radius: 50%;
+  right: 2rem;
+  top: -2rem;
+  left: unset;
+  color: white !important;
+}
+.servicesSwiper .swiper-button-prev {
+  right: 5rem;
+}
+
+/** RTL **/
+.servicesSwiper.swiper-rtl .swiper-button-prev {
+  right: 0rem !important;
+}
+.servicesSwiper.swiper-rtl .swiper-button-next {
+  right: 3.5rem !important;
+}
+
+.servicesSwiper .swiper-button-next:after,
+.servicesSwiper .swiper-button-prev:after {
+  font-size: 1rem;
+  transform: translateX(0.1rem);
+}
+.servicesSwiper .swiper-button-prev:after {
+  transform: translateX(-0.1rem);
+}
+
+.servicesSwiper.swiper-rtl .swiper-button-next:after,
+.servicesSwiper.swiper-rtl .swiper-button-prev:after {
+  font-size: 1rem;
+  transform: translateX(-0.1rem);
+}
+.servicesSwiper.swiper-rtl .swiper-button-prev:after {
+  transform: translateX(0.1rem);
+}
 
 /*********************/
 
