@@ -4,30 +4,24 @@ import BookAppointement from "../Widgets/BookAppointement";
 import ServicesDropdowns from "../Widgets/ServicesDropdown/ServicesDropdowns";
 import Stats from "./Stats";
 import { useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
+import MyVideo from "../Widgets/MyVideo";
 
 const Services = () => {
   const { t } = useTranslation("services");
+
   return (
     <>
       <section className=" gap-5 text-center">
         <h1 className="relative  mx-auto mb-8   md:mb-12">
           <div className="  absolute -z-10  translate-y-1/2 translate-x-1/2 	">
-            <Image
-              src="/widgets/points.svg"
-              alt=""
-              width="143"
-              height={"105"}
-            />
+            <Image src="/widgets/points.svg" alt="" width="143" height={"105"} />
           </div>
           {t("h1")}
           <div className="absolute bottom-1/2 right-1/4 -z-10 h-32 w-32 translate-y-1/2 rounded-full bg-primary blur-[150px] md:blur-[100px]"></div>
         </h1>
         <div className="relative z-20 mx-auto h-[14.75rem] w-full overflow-hidden rounded-2xl md:h-[25.75rem] macbook:h-[47.75rem]">
-          <Image
-            src="/img/services/services.webp"
-            alt="clinic dentist"
-            layout="fill"
-          />
+          <MyVideo url="/treatment.mp4" />
         </div>
 
         <div className="md: text-start  mt-16">

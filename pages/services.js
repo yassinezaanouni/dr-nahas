@@ -18,11 +18,7 @@ export async function getStaticProps({ locale }) {
   };
 }
 const services = () => {
-  return (
-    <>
-      <Services />
-    </>
-  );
+  return <Services />;
 };
 
 export default services;

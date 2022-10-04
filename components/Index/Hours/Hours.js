@@ -7,8 +7,8 @@ import { useTranslation } from "next-i18next";
 const Hours = () => {
   const { t } = useTranslation("common");
   return (
-    <section className="f-ai-c w-full flex-wrap justify-center gap-4 gap-y-10 lg:justify-between  macbook:justify-start ">
-      <div className="left flex flex-col gap-7 lg:basis-[45%] macbook:basis-[60%] ">
+    <section className="f-ai-c w-full flex-wrap justify-center gap-6 gap-y-10 lg:justify-between ">
+      <div className="left flex min-w-[13.75rem] flex-1 flex-col gap-7 sm:min-w-[25.625rem]">
         <h2 className=" relative max-w-[20ch]">
           {t("headerStar").split(" ").slice(0, -2).join(" ")}
           <span> {t("headerStar").split(" ").slice(-2).join(" ")}</span>
@@ -27,7 +27,7 @@ const Hours = () => {
           </div>
         </Link>
       </div>
-      <div className="relative">
+      <div className="relative max-w-[35rem] flex-1">
         <div className="  absolute right-0 -z-10 translate-x-1/2 -translate-y-1/2	">
           <Image src="/widgets/points.svg" alt="" width="143" height={"105"} />
         </div>

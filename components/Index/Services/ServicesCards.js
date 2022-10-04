@@ -23,9 +23,8 @@ import { useTranslation } from "next-i18next";
 const ServicesCards = ({ isServicePage = false }) => {
   const { t } = useTranslation("index");
 
-  const [dropNumber, setDropNumber] = useState(1);
-
   const router = useRouter();
+  const [dropNumber, setDropNumber] = useState(Number(router?.query?.service) || 1);
   return (
     <section className="f-ai-c  relative flex-col justify-center" id="services">
       <div
@@ -46,22 +45,15 @@ const ServicesCards = ({ isServicePage = false }) => {
           <div>
             <Button
               text={t("servicesBtn")}
-              tw={`${
-                isServicePage ? "hidden" : " hidden md:block whitespace-nowrap"
-              } `}
+              tw={`${isServicePage ? "hidden" : " hidden md:block whitespace-nowrap"} `}
             />
           </div>
         </Link>
       </div>
-      <Swiper
-        slidesPerView={"auto"}
-        spaceBetween={30}
-        grabCursor={true}
-        className="servicesSwiper  text-start  "
-      >
+      <Swiper slidesPerView={"auto"} spaceBetween={30} grabCursor={true} className="servicesSwiper  text-start  ">
         <SwiperSlide
           onClick={() => {
-            !isServicePage && router.push("/services/#services");
+            !isServicePage && router.push("/services?service=1#services");
 
             setDropNumber(1);
           }}
@@ -75,7 +67,7 @@ const ServicesCards = ({ isServicePage = false }) => {
         </SwiperSlide>
         <SwiperSlide
           onClick={() => {
-            !isServicePage && router.push("/services/#services");
+            !isServicePage && router.push("/services?service=2#services");
 
             setDropNumber(2);
           }}
@@ -89,7 +81,7 @@ const ServicesCards = ({ isServicePage = false }) => {
         </SwiperSlide>
         <SwiperSlide
           onClick={() => {
-            !isServicePage && router.push("/services/#services");
+            !isServicePage && router.push("/services?service=3#services");
 
             setDropNumber(3);
           }}
@@ -103,7 +95,7 @@ const ServicesCards = ({ isServicePage = false }) => {
         </SwiperSlide>{" "}
         <SwiperSlide
           onClick={() => {
-            !isServicePage && router.push("/services/#services");
+            !isServicePage && router.push("/services?service=4#services");
 
             setDropNumber(5);
           }}
@@ -117,7 +109,7 @@ const ServicesCards = ({ isServicePage = false }) => {
         </SwiperSlide>
         <SwiperSlide
           onClick={() => {
-            !isServicePage && router.push("/services/#services");
+            !isServicePage && router.push("/services?service=5#services");
 
             setDropNumber(4);
           }}
@@ -134,9 +126,8 @@ const ServicesCards = ({ isServicePage = false }) => {
       {isServicePage && dropNumber === 1 && (
         <motion.div
           key="dropdown1"
-          initial={{ translateX: "-100vw", opacity: 0 }}
-          animate={{ translateX: 0, beforeChildren: true, opacity: 1 }}
-          // transition={{ duration: 0.15, type: "tween" }}
+          initial={{ translateX: "-25px", opacity: 0 }}
+          animate={{ translateX: 0, opacity: 1 }}
           exit={{ translateX: "100vw" }}
         >
           <DropDown1 />
@@ -146,9 +137,8 @@ const ServicesCards = ({ isServicePage = false }) => {
       {isServicePage && dropNumber === 2 && (
         <motion.div
           key="dropdown2"
-          initial={{ translateX: "-100vw", opacity: 0 }}
-          animate={{ translateX: 0, beforeChildren: true, opacity: 1 }}
-          // transition={{ duration: 0.15, type: "tween" }}
+          initial={{ translateX: "-25px", opacity: 0 }}
+          animate={{ translateX: 0, opacity: 1 }}
           exit={{ translateX: "100vw" }}
         >
           <DropDown2 />
@@ -157,9 +147,8 @@ const ServicesCards = ({ isServicePage = false }) => {
       {isServicePage && dropNumber === 3 && (
         <motion.div
           key="dropdown3"
-          initial={{ translateX: "-100vw", opacity: 0 }}
-          animate={{ translateX: 0, beforeChildren: true, opacity: 1 }}
-          // transition={{ duration: 0.15, type: "tween" }}
+          initial={{ translateX: "-25px", opacity: 0 }}
+          animate={{ translateX: 0, opacity: 1 }}
           exit={{ translateX: "100vw" }}
         >
           <DropDown3 />
@@ -168,9 +157,8 @@ const ServicesCards = ({ isServicePage = false }) => {
       {isServicePage && dropNumber === 4 && (
         <motion.div
           key="dropdown4"
-          initial={{ translateX: "-100vw", opacity: 0 }}
-          animate={{ translateX: 0, beforeChildren: true, opacity: 1 }}
-          // transition={{ duration: 0.15, type: "tween" }}
+          initial={{ translateX: "-25px", opacity: 0 }}
+          animate={{ translateX: 0, opacity: 1 }}
           exit={{ translateX: "100vw" }}
         >
           <DropDown4 />
@@ -179,9 +167,8 @@ const ServicesCards = ({ isServicePage = false }) => {
       {isServicePage && dropNumber === 5 && (
         <motion.div
           key="dropdown5"
-          initial={{ translateX: "-100vw", opacity: 0 }}
-          animate={{ translateX: 0, beforeChildren: true, opacity: 1 }}
-          // transition={{ duration: 0.15, type: "tween" }}
+          initial={{ translateX: "-25px", opacity: 0 }}
+          animate={{ translateX: 0, opacity: 1 }}
           exit={{ translateX: "100vw" }}
         >
           <DropDown5 />

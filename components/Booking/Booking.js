@@ -3,11 +3,7 @@ import { Hour } from "../Index/Hours/Hour";
 import BookAppointement from "../Widgets/BookAppointement";
 
 const Booking = () => {
-  return (
-    <>
-      <BookAppointement />
-    </>
-  );
+  return <BookAppointement />;
 };
 
 export default Booking;

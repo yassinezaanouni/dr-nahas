@@ -1,13 +1,11 @@
 module.exports = {
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       screens: {
         macbook: "1281px",
         xsm: "370px",
+        xxs: "280px",
       },
       colors: {
         primary: "#239ECB",

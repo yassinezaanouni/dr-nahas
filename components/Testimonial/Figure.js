@@ -29,18 +29,14 @@ const Figure = ({ author, text, rating, image }) => {
           number={"1K"}
           text="Positive Review"
           isInverted={true}
-          tw={
-            "absolute text-bold top-[70%] md:top-[60%] right-0 text-primary z-20 md:translate-x-1/4"
-          }
-          tw2={
-            "absolute top-0 left-0 -translate-y-1/2 -translate-x-1/2  w-[36px] aspect-square md:w-[51px] "
-          }
+          tw={"absolute text-bold top-[70%] md:top-[60%] right-0 text-primary z-20 md:translate-x-1/4"}
+          tw2={"absolute top-0 left-0 -translate-y-1/2 -translate-x-1/2  w-[36px] aspect-square md:w-[51px] "}
         />
         <div className="  absolute right-0   translate-x-1/2 -translate-y-1/2	">
           <Image src="/widgets/points.svg" alt="" width="143" height={"105"} />
         </div>
         <div className="relative z-10 overflow-hidden rounded-2xl rounded-tl-[8rem]">
-          <Image src={image} alt="tesetimonial" width="472" height="484" />
+          <Image src={image} alt="tesetimonial" width="472" height="484" priority={true} />
         </div>
         <div className="  absolute left-0  -translate-x-1/2 -translate-y-1/2 	">
           <Image src="/widgets/points.svg" alt="" width="143" height={"105"} />
