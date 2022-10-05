@@ -4,6 +4,8 @@ import { Button } from "./Button";
 import { useTranslation } from "next-i18next";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
+import SubmitionStateAlert from "./SubmitionStateAlert";
+import Spinner from "./Spinner";
 
 const BookAppointement = () => {
   const { t } = useTranslation("common");
@@ -12,6 +14,8 @@ const BookAppointement = () => {
     email: "",
     date: "",
   });
+  const [isSending, setIsSending] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -22,15 +26,31 @@ const BookAppointement = () => {
   };
   const sendEmail = (e) => {
     e.preventDefault();
-    console.log({ values });
-    emailjs.send("service_cf25axc", "template_w4hqdka", values, "Pi2u0fzb8a1Qr03YS").then(
-      (result) => {
-        console.log(result.text);
-      },
-      (error) => {
-        console.log(error.text);
-      }
-    );
+    setIsSending(true);
+    emailjs
+      .send("service_cf25axc", "template_w4hqdka", values, "Pi2u0fzb8a1Qr03YS")
+      .then(
+        (result) => {
+          console.log(result.text);
+          setIsSuccess(true);
+        },
+        (error) => {
+          console.log(error.text);
+          setIsSuccess(false);
+        }
+      )
+      .finally(() => {
+        setIsSending(false);
+      });
+  };
+
+  const handleAlertClose = () => {
+    setValues({
+      name: "",
+      email: "",
+      date: "",
+    });
+    setIsSuccess(null);
   };
   return (
     <section className=" ">
@@ -54,20 +74,42 @@ const BookAppointement = () => {
 
         <div className=" relative h-[25.9375rem] w-full overflow-hidden rounded-3xl lg:h-[45.9375rem] ">
           <Image src="/img/booking.webp" alt="booking dentesit" layout="fill" />
-          <form
-            onSubmit={sendEmail}
-            className="f-ai-c absolute inset-x-8 bottom-8 z-10 flex-wrap justify-between gap-4  rounded-3xl bg-white p-6 md:p-12"
-          >
-            <input type="text" name="name" placeholder={t("name")} required onChange={handleChange} />
-            <input type="email" name="email" placeholder={t("email")} required onChange={handleChange} />
-            <input type="date" name="date" required onChange={handleChange} />
-            <Button text={t("bookBtn")} />
-          </form>
+
+          <div className="absolute inset-x-8 bottom-8 z-10 rounded-3xl bg-white p-6 md:p-12">
+            {isSuccess === null && !isSending && (
+              <form onSubmit={sendEmail} className="f-ai-c w-full flex-wrap justify-between gap-4  bg-white ">
+                <input
+                  aria-labelledby="name"
+                  type="text"
+                  name="name"
+                  placeholder={t("name")}
+                  required
+                  onChange={handleChange}
+                />
+                <input
+                  aria-labelledby="email"
+                  type="email"
+                  name="email"
+                  placeholder={t("email")}
+                  required
+                  onChange={handleChange}
+                />
+                <input aria-labelledby="date" type="date" name="date" required onChange={handleChange} />
+                <Button text={t("bookBtn")} tw="flex-1 md:flex-initial" disabled={isSending} />
+              </form>
+            )}
+            {isSending && (
+              <div className="flex-1">
+                <Spinner color="#239ECB" size={40} tw="mx-auto" />
+              </div>
+            )}
+            {isSuccess !== null && <SubmitionStateAlert isSuccess={isSuccess} handleAlertClose={handleAlertClose} />}
+          </div>
         </div>
       </div>
       <style jsx>{`
         input {
-          @apply flex-1   border-2 border-[#D6D6D6] bg-grey-100;
+          @apply flex-1  border-2 border-[#D6D6D6] bg-grey-100;
           padding: 1.2rem 1.5rem;
           min-width: 8rem;
           border-radius: 0.4rem;

@@ -8,8 +8,7 @@ const Header = () => {
   const router = useRouter();
   const divNav = useRef();
   let menuItems = ["Dr.Nahas", "Home", "Gallery", "Services", "Booking"];
-  if (router.locale === "ar")
-    menuItems = [" د.نحاس", "الرئيسية", "الصور", "الخدمة", "الحجز"];
+  if (router.locale === "ar") menuItems = [" د.نحاس", "الرئيسية", "الصور", "الخدمة", "الحجز"];
   return (
     <header ref={divNav} className=" bg-grey-100 ">
       <div className="main f-ai-c  w-full justify-between gap-2">
@@ -52,7 +51,7 @@ const Header = () => {
           </ul>
           <div className="f-ai-c flex-col justify-between gap-[1vw] md:hidden ">
             <div className={" f-ai-c  "}>
-              <Image src={"/icons/dubai.png"} width={73} height={28} />
+              <Image src={"/icons/dubai.png"} width={73} height={28} alt="Dubai" />
             </div>
             <button className="cursor-pointer bg-transparent px-2 py-1 hover:text-[#F89B1B] active:scale-110">
               {router.locale == "ar" ? (
@@ -69,7 +68,7 @@ const Header = () => {
         </nav>
         <div className="hidden items-center  justify-between gap-[1vw] md:flex ">
           <div className={" f-ai-c  only-desktop"}>
-            <Image src={"/icons/dubai.png"} width={73} height={28} />
+            <Image src={"/icons/dubai.png"} width={73} height={28} alt="Dubai" />
           </div>
           <button className="languages cursor-pointer bg-transparent px-2 py-1 hover:text-[#F89B1B] active:scale-110">
             {router.locale == "ar" ? (
@@ -90,20 +89,10 @@ const Header = () => {
           }}
         >
           <div className="nav-icon" name="open-nav">
-            <Image
-              src={"/icons/mobile-nav.svg"}
-              width={29}
-              height={20}
-              layout="fixed"
-            />
+            <Image src={"/icons/mobile-nav.svg"} width={29} height={20} layout="fixed" alt="open nav" />
           </div>
           <div className="nav-icon" name="close-nav">
-            <Image
-              src={"/icons/close-mobile-nav.svg"}
-              width={29}
-              height={20}
-              layout="fixed"
-            />
+            <Image src={"/icons/close-mobile-nav.svg"} width={29} height={20} layout="fixed" alt="close nav" />
           </div>
         </button>
       </div>

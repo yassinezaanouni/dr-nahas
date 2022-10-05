@@ -7,14 +7,14 @@ import Treatment from "./Treatment/Treatment";
 
 const Index = () => {
   return (
-    <div>
+    <>
       <Hero />
       <AboutMe />
       <ServicesCards />
       <Treatment />
       <Hours />
       <Testimonial />
-    </div>
+    </>
   );
 };
 

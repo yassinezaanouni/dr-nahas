@@ -27,5 +27,7 @@
   "starRating": "تقييم من مرضانا",
   "contactInfo": "اتصل بنا: +971 54371 6446",
   "smileh1": "ابتسامة الذكريات",
-  "smilep": "Better smile"
+  "smilep": "Better smile",
+  "formSuccess": "تم إرسال الطلب بنجاح",
+  "formError": "حدث خطأ أثناء إرسال الطلب"
 }

@@ -52,17 +52,23 @@ const Footer = () => {
           <ul className="social-medias f-ai-c  gap-3">
             <li className=" f-ai-c relative aspect-square w-10 cursor-pointer justify-center rounded-full bg-primary/30 hover:bg-primary/20 md:w-12">
               <Link href="#">
-                <Image src="/icons/social-media/fb.svg" width={18} height={18} />
+                <a style={{ height: 18 }}>
+                  <Image src="/icons/social-media/fb.svg" width={18} height={18} alt="Facebook" />
+                </a>
               </Link>
             </li>
             <li className=" f-ai-c relative aspect-square w-10 cursor-pointer justify-center rounded-full bg-primary/30 hover:bg-primary/20 md:w-12">
               <Link href="#">
-                <Image src="/icons/social-media/youtube.svg" width={24} height={24} />
+                <a style={{ height: 24 }}>
+                  <Image src="/icons/social-media/youtube.svg" width={24} height={24} alt="Youtube" />
+                </a>
               </Link>
             </li>
             <li className=" f-ai-c relative aspect-square w-10 cursor-pointer justify-center rounded-full bg-primary/30 hover:bg-primary/20 md:w-12">
               <Link href="#">
-                <Image src="/icons/social-media/instagram.svg" width={18} height={18} />
+                <a style={{ height: 18 }}>
+                  <Image src="/icons/social-media/instagram.svg" width={18} height={18} alt="Instagram" />
+                </a>
               </Link>
             </li>
           </ul>
@@ -109,15 +115,15 @@ const Footer = () => {
           <h3 className="text-lg font-medium">{items[13]}</h3>
           <ul className="">
             <li className="f-ai-c  gap-6 ">
-              <Image src="/icons/phone.svg" layout="fixed" width={18} height={18} />
+              <Image src="/icons/phone.svg" layout="fixed" width={18} height={18} alt="" />
               +971 54371 6446
             </li>
             <li className="hidden  items-center gap-6 md:flex">
-              <Image src="/icons/clock.svg" layout="fixed" width={18} height={18} />
+              <Image src="/icons/clock.svg" layout="fixed" width={18} height={18} alt="" />
               {items[14]}
             </li>{" "}
             <li className="   hidden gap-6 md:flex">
-              <Image src="/icons/location.svg" layout="fixed" width={18} height={18} />
+              <Image src="/icons/location.svg" layout="fixed" width={18} height={18} alt="" />
               <p>{items[15]}</p>
             </li>{" "}
           </ul>

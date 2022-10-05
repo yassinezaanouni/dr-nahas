@@ -27,5 +27,7 @@
   "starRating": "Rating From Our Patients",
   "contactInfo": "Our Contact : +971 54 371 6446",
   "smileh1": "Smile Gallery",
-  "smilep": "Better smile"
+  "smilep": "Better smile",
+  "formSuccess": "Your Appointment has been booked successfully!",
+  "formError": "Something went wrong, please try again later!"
 }

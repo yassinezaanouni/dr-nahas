@@ -6,7 +6,7 @@ const FloatingCard = ({ icon, number, text, isInverted, tw, tw2 }) => {
       className={`f-ai-c gap-3 rounded-2xl bg-white p-4 text-xs font-black shadow-2xl shadow-black/30 md:gap-8 md:py-6 md:px-8 md:pr-16 ${tw} md:text-lg`}
     >
       <div className={` f-ai-c ${tw2}`}>
-        <img src={icon} />
+        <img src={icon} alt="" />
       </div>
       <p>
         <span className={`${isInverted ? "text-primary" : ""}`}>

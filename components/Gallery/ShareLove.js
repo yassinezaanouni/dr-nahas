@@ -61,7 +61,7 @@ const ShareLove = () => {
             imgs.map((img, i) => (
               <SwiperSlide key={i}>
                 <div className="overflow-hidden rounded-xl">
-                  <Image src={img} width="340" height="285" alt="love clients moments" />
+                  <Image src={img} width="340" height="285" alt="happy clients clients moments" />
                 </div>
               </SwiperSlide>
             ))}

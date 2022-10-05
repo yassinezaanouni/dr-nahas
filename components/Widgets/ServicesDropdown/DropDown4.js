@@ -13,7 +13,7 @@ const DropDown4 = () => {
           <p>{t("p1")} </p>
         </div>
         <div className="right relative h-[26.75rem] w-full overflow-hidden rounded-xl">
-          <Image src="/img/services/dropdown/11.webp" alt="Digital smile Design" layout="fill" />
+          <Image src="/img/services/dropdown/11.webp" alt="Dental Veneer" layout="fill" />
         </div>
       </div>
 
@@ -26,7 +26,7 @@ const DropDown4 = () => {
           <p>{t("p5")}</p>
         </div>
         <div className="right relative h-[21.75rem] w-full overflow-hidden rounded-xl">
-          <Image src="/img/services/dropdown/12.jpg" alt="Digital smile Design" layout="fill" />
+          <Image src="/img/services/dropdown/12.jpg" alt="Dental Veneer" layout="fill" />
         </div>
       </div>
 
@@ -54,7 +54,7 @@ const DropDown4 = () => {
           </ol>
         </div>
         <div className="right relative h-[26.75rem] w-full overflow-hidden rounded-xl lg:h-[30.75rem]">
-          <Image src="/img/services/dropdown/13.webp" alt="Digital smile Design" layout="fill" />
+          <Image src="/img/services/dropdown/13.webp" alt="Dental Veneer" layout="fill" />
         </div>
       </div>
       <div className="flex-container flex-row-reverse">
@@ -63,7 +63,7 @@ const DropDown4 = () => {
           <p>{t("p15")}</p>
         </div>
         <div className="right relative h-[21.75rem] w-full overflow-hidden rounded-xl">
-          <Image src="/img/services/dropdown/14.jpg" alt="Digital smile Design" layout="fill" />
+          <Image src="/img/services/dropdown/14.jpg" alt="Dental Veneer" layout="fill" />
         </div>
       </div>
 

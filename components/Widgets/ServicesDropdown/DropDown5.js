@@ -14,11 +14,7 @@ const DropDown5 = () => {
           <p>{t("p5")}</p>
         </div>
         <div className="right relative h-[26.75rem] w-full overflow-hidden rounded-xl">
-          <Image
-            src="/img/services/dropdown/15.jpg"
-            alt="Digital smile Design"
-            layout="fill"
-          />
+          <Image src="/img/services/dropdown/15.jpg" alt="Tooth Filling" layout="fill" />
         </div>
       </div>
 
@@ -29,11 +25,7 @@ const DropDown5 = () => {
           <p>{t("p9")}</p>
         </div>
         <div className="right relative h-[26.75rem] w-full overflow-hidden rounded-xl">
-          <Image
-            src="/img/services/dropdown/16.jpg"
-            alt="Digital smile Design"
-            layout="fill"
-          />
+          <Image src="/img/services/dropdown/16.jpg" alt="Tooth Filling" layout="fill" />
         </div>
       </div>
       <div className="flex-container ">
@@ -42,11 +34,7 @@ const DropDown5 = () => {
           <p>{t("p14")}</p>
         </div>
         <div className="right relative h-[27.75rem] w-full overflow-hidden rounded-xl">
-          <Image
-            src="/img/services/dropdown/new1.jpeg"
-            alt="Digital smile Design"
-            layout="fill"
-          />
+          <Image src="/img/services/dropdown/new1.jpeg" alt="Tooth Filling" layout="fill" />
         </div>
       </div>
 
