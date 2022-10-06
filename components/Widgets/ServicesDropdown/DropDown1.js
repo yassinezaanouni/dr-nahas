@@ -1,5 +1,4 @@
 import Image from "next/image";
-
 import { useTranslation } from "next-i18next";
 const DropDown1 = () => {
   const { t } = useTranslation("dropDown1");
@@ -13,7 +12,7 @@ const DropDown1 = () => {
           <p>{t("p1")} </p>
         </div>
         <div className="right relative h-[21.75rem] w-full overflow-hidden rounded-xl">
-          <Image src="/img/services/dropdown/1.webp" alt="Digital smile Design" layout="fill" />
+          <Image src="/img/services/dropdown/1.webp" alt="Digital smile Design" layout="fill" objectFit="cover" />
         </div>
       </div>
 
@@ -30,7 +29,7 @@ const DropDown1 = () => {
           </ul>
         </div>
         <div className="right relative h-[21.75rem] w-full overflow-hidden rounded-xl">
-          <Image src="/img/services/dropdown/2.webp" alt="Digital smile Design" layout="fill" />
+          <Image src="/img/services/dropdown/2.webp" alt="Digital smile Design" layout="fill" objectFit="cover" />
         </div>
       </div>
       <div className="flex-container">
@@ -57,7 +56,7 @@ const DropDown1 = () => {
           </ol>
         </div>
         <div className="right relative h-[28.75rem] w-full overflow-hidden rounded-xl">
-          <Image src="/img/services/dropdown/3.webp" alt="Digital smile Design" layout="fill" />
+          <Image src="/img/services/dropdown/3.webp" alt="Digital smile Design" layout="fill" objectFit="cover" />
         </div>
       </div>
       <style jsx>

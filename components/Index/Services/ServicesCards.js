@@ -20,13 +20,13 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useTranslation } from "next-i18next";
 
-const ServicesCards = ({ isServicePage = false }) => {
+const ServicesCards = ({ isServicePage = false, id }) => {
   const { t } = useTranslation("index");
 
   const router = useRouter();
   const [dropNumber, setDropNumber] = useState(Number(router?.query?.service) || 1);
   return (
-    <section className="f-ai-c  relative flex-col justify-center" id="services">
+    <section className="f-ai-c  relative flex-col justify-center" id={id}>
       <div
         className={`absolute inset-0 left-0 -z-10 w-[200vw] ${
           router.locale == "ar" ? "translate-x-1/2" : "-translate-x-1/2"
@@ -61,7 +61,6 @@ const ServicesCards = ({ isServicePage = false }) => {
         <SwiperSlide
           onClick={() => {
             !isServicePage && router.push("/services?service=1#services");
-
             setDropNumber(1);
           }}
         >

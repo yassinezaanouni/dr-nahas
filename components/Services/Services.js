@@ -27,6 +27,7 @@ const Services = () => {
         <div className="md: text-start  mt-16">
           <ServicesCards
             isServicePage={true}
+            id="services"
             // setDropNumber={setDropNumber}
             // dropNumber={dropNumber}
           />

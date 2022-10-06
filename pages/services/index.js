@@ -1,7 +1,8 @@
 import Head from "next/head";
-import Services from "../components/Services/Services";
+import Services from "../../components/Services/Services";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
 
 export async function getStaticProps({ locale }) {
   return {
@@ -22,10 +23,15 @@ export async function getStaticProps({ locale }) {
 }
 const services = () => {
   const { t } = useTranslation("headDescription");
-
+  const router = useRouter();
   return (
     <>
       <Head>
+        <title>
+          {router.locale === "ar"
+            ? "الخدمة - تعرف على خدماتنا في طب الاسنان"
+            : "Service - Dental Treatment Service in Dubai"}
+        </title>
         <meta name="description" content={t("headDescription:services")} />
       </Head>
       <Services />
