@@ -12,7 +12,7 @@ export async function getStaticProps({ locale }) {
   };
 }
 
-const index = () => {
+const Index = () => {
   const { t } = useTranslation("headDescription");
   const router = useRouter();
   return (
@@ -30,4 +30,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

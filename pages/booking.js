@@ -11,7 +11,7 @@ export async function getStaticProps({ locale }) {
     }, // will be passed to the page component as props
   };
 }
-const book = () => {
+const Index = () => {
   const { t } = useTranslation("headDescription");
   const router = useRouter();
   return (
@@ -29,4 +29,4 @@ const book = () => {
   );
 };
 
-export default book;
+export default Index;

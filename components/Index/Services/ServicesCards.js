@@ -20,7 +20,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useTranslation } from "next-i18next";
 
-const ServicesCards = ({ isServicePage = false, id }) => {
+const ServicesCards = ({ isServicePage = false, id = "" }) => {
   const { t } = useTranslation("index");
 
   const router = useRouter();
