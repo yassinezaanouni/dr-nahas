@@ -22,7 +22,7 @@ const Footer = () => {
     "Booking",
     "Contact",
     "Mon - Fri: 9.00Am - 11.00Pm",
-    " Levantine Dental Clinic, SMJ1 - 22 A St - Al Safa - Al Safa 1 - Dubai",
+    "Jumeirah | Dubai, United Arab Emirates",
   ];
   if (router.locale === "ar")
     items = [
@@ -41,7 +41,7 @@ const Footer = () => {
       "الحجز",
       "الإتصال",
       "الإثنين - الجمعة: 9.00 AM - 11.00 PM",
-      " Levantine Dental Clinic, SMJ1 - 22 A St - Al Safa - Al Safa 1 - Dubai",
+      "جميرا | دبى، الامارات العربية المتحدة",
     ];
   return (
     <footer className="bg-white py-5 text-center sm:py-10 lg:py-16 lg:pr-32">

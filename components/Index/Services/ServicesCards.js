@@ -61,6 +61,8 @@ const ServicesCards = ({ isServicePage = false, id = "" }) => {
         <SwiperSlide
           onClick={() => {
             !isServicePage && router.push("/services?service=1#services");
+            isServicePage && document.getElementById("services-dropdown").scrollIntoView();
+
             setDropNumber(1);
           }}
         >
@@ -74,6 +76,8 @@ const ServicesCards = ({ isServicePage = false, id = "" }) => {
         <SwiperSlide
           onClick={() => {
             !isServicePage && router.push("/services?service=2#services");
+
+            isServicePage && document.getElementById("services-dropdown").scrollIntoView();
 
             setDropNumber(2);
           }}
@@ -89,6 +93,8 @@ const ServicesCards = ({ isServicePage = false, id = "" }) => {
           onClick={() => {
             !isServicePage && router.push("/services?service=3#services");
 
+            isServicePage && document.getElementById("services-dropdown").scrollIntoView();
+
             setDropNumber(3);
           }}
         >
@@ -102,6 +108,8 @@ const ServicesCards = ({ isServicePage = false, id = "" }) => {
         <SwiperSlide
           onClick={() => {
             !isServicePage && router.push("/services?service=5#services");
+
+            isServicePage && document.getElementById("services-dropdown").scrollIntoView();
 
             setDropNumber(5);
           }}
@@ -117,6 +125,8 @@ const ServicesCards = ({ isServicePage = false, id = "" }) => {
           onClick={() => {
             !isServicePage && router.push("/services?service=4#services");
 
+            isServicePage && document.getElementById("services-dropdown").scrollIntoView();
+
             setDropNumber(4);
           }}
         >
@@ -129,62 +139,64 @@ const ServicesCards = ({ isServicePage = false, id = "" }) => {
         </SwiperSlide>
       </Swiper>
 
-      {isServicePage && dropNumber === 1 && (
-        <motion.div
-          key="dropdown1"
-          initial={{ translateX: "-25px", opacity: 0 }}
-          animate={{ translateX: 0, opacity: 1 }}
-          exit={{ translateX: "100vw" }}
-        >
-          <DropDown1 />
-        </motion.div>
-      )}
+      <div id="services-dropdown">
+        {isServicePage && dropNumber === 1 && (
+          <motion.div
+            key="dropdown1"
+            initial={{ translateX: "-25px", opacity: 0 }}
+            animate={{ translateX: 0, opacity: 1 }}
+            exit={{ translateX: "100vw" }}
+          >
+            <DropDown1 />
+          </motion.div>
+        )}
 
-      {isServicePage && dropNumber === 2 && (
-        <motion.div
-          key="dropdown2"
-          initial={{ translateX: "-25px", opacity: 0 }}
-          animate={{ translateX: 0, opacity: 1 }}
-          exit={{ translateX: "100vw" }}
-        >
-          <DropDown2 />
-        </motion.div>
-      )}
-      {isServicePage && dropNumber === 3 && (
-        <motion.div
-          key="dropdown3"
-          initial={{ translateX: "-25px", opacity: 0 }}
-          animate={{ translateX: 0, opacity: 1 }}
-          exit={{ translateX: "100vw" }}
-        >
-          <DropDown3 />
-        </motion.div>
-      )}
-      {isServicePage && dropNumber === 4 && (
-        <motion.div
-          key="dropdown4"
-          initial={{ translateX: "-25px", opacity: 0 }}
-          animate={{ translateX: 0, opacity: 1 }}
-          exit={{ translateX: "100vw" }}
-        >
-          <DropDown4 />
-        </motion.div>
-      )}
-      {isServicePage && dropNumber === 5 && (
-        <motion.div
-          key="dropdown5"
-          initial={{ translateX: "-25px", opacity: 0 }}
-          animate={{ translateX: 0, opacity: 1 }}
-          exit={{ translateX: "100vw" }}
-        >
-          <DropDown5 />
-        </motion.div>
-      )}
-      <Link href="/services/#services">
-        <div className={`${isServicePage ? "hidden" : ""}`}>
-          <Button text={t("servicesBtn")} tw={`  mt-8 md:hidden `} />
-        </div>
-      </Link>
+        {isServicePage && dropNumber === 2 && (
+          <motion.div
+            key="dropdown2"
+            initial={{ translateX: "-25px", opacity: 0 }}
+            animate={{ translateX: 0, opacity: 1 }}
+            exit={{ translateX: "100vw" }}
+          >
+            <DropDown2 />
+          </motion.div>
+        )}
+        {isServicePage && dropNumber === 3 && (
+          <motion.div
+            key="dropdown3"
+            initial={{ translateX: "-25px", opacity: 0 }}
+            animate={{ translateX: 0, opacity: 1 }}
+            exit={{ translateX: "100vw" }}
+          >
+            <DropDown3 />
+          </motion.div>
+        )}
+        {isServicePage && dropNumber === 4 && (
+          <motion.div
+            key="dropdown4"
+            initial={{ translateX: "-25px", opacity: 0 }}
+            animate={{ translateX: 0, opacity: 1 }}
+            exit={{ translateX: "100vw" }}
+          >
+            <DropDown4 />
+          </motion.div>
+        )}
+        {isServicePage && dropNumber === 5 && (
+          <motion.div
+            key="dropdown5"
+            initial={{ translateX: "-25px", opacity: 0 }}
+            animate={{ translateX: 0, opacity: 1 }}
+            exit={{ translateX: "100vw" }}
+          >
+            <DropDown5 />
+          </motion.div>
+        )}
+        <Link href="/services/#services">
+          <div className={`${isServicePage ? "hidden" : ""}`}>
+            <Button text={t("servicesBtn")} tw={`  mt-8 md:hidden `} />
+          </div>
+        </Link>
+      </div>
     </section>
   );
 };

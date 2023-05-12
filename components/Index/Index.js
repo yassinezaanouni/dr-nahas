@@ -1,3 +1,4 @@
+import Moments from "../Gallery/Moments";
 import Testimonial from "../Testimonial/Testimonial";
 import AboutMe from "./AboutMe/AboutMe";
 import Hero from "./Hero/Hero";
@@ -13,6 +14,7 @@ const Index = () => {
       <ServicesCards />
       <Treatment />
       <Hours />
+      <Moments />
       <Testimonial />
     </>
   );

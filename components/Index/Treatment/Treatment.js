@@ -13,12 +13,42 @@ const Treatment = ({ isVideo = true }) => {
         <p className="text-light">{t("t2")}</p>
       </div>
       <div className="f-ai-c flex-wrap justify-center gap-8">
-        <TreatmentCard image="/img/treatment/1.webp" icon={"/icons/treatment/treatment2.svg"} title={t("t3")} />{" "}
-        <TreatmentCard image="/img/treatment/2.webp" icon={"/icons/treatment/treatment2.svg"} title={t("t4")} />{" "}
-        <TreatmentCard image="/img/treatment/3.webp" icon={"/icons/treatment/treatment2.svg"} title={t("t5")} />{" "}
-        <TreatmentCard image="/img/treatment/4.webp" icon={"/icons/treatment/treatment2.svg"} title={t("t6")} />{" "}
-        <TreatmentCard image="/img/treatment/5.webp" icon={"/icons/treatment/treatment2.svg"} title={t("t7")} />{" "}
-        <TreatmentCard image="/img/treatment/6.webp" icon={"/icons/treatment/treatment2.svg"} title={t("t8")} />{" "}
+        <TreatmentCard
+          image="/img/treatment/1.webp"
+          icon={"/icons/treatment/treatment2.svg"}
+          title={t("t3")}
+          className=""
+        />
+        <TreatmentCard
+          image="/img/treatment/2.webp"
+          icon={"/icons/treatment/treatment2.svg"}
+          title={t("t4")}
+          className=""
+        />
+        <TreatmentCard
+          image="/img/treatment/3.webp"
+          icon={"/icons/treatment/treatment2.svg"}
+          title={t("t5")}
+          className=""
+        />
+        <TreatmentCard
+          image="/img/treatment/4.webp"
+          icon={"/icons/treatment/treatment2.svg"}
+          title={t("t6")}
+          className=""
+        />
+        <TreatmentCard
+          image="/img/treatment/5.webp"
+          icon={"/icons/treatment/treatment2.svg"}
+          title={t("t7")}
+          className=""
+        />
+        <TreatmentCard
+          image="/img/treatment/6.webp"
+          icon={"/icons/treatment/treatment2.svg"}
+          title={t("t8")}
+          className=""
+        />
       </div>
     </section>
   );

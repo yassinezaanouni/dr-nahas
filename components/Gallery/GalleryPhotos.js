@@ -34,7 +34,7 @@ export const GalleryPhotos = () => {
 
       <Treatment isVideo={false} />
 
-      <h2 className="mb-6 mt-8 md:mb-16 md:mt-24">
+      {/* <h2 className="mb-6 mt-8 md:mb-16 md:mt-24">
         {t("g2").split(" ").slice(0, 1).join(" ")}
         <span> {t("g2").split(" ").slice(1, t("g2").length).join(" ")} </span>
       </h2>
@@ -54,7 +54,7 @@ export const GalleryPhotos = () => {
         <div className="relative mx-auto h-[8.125rem] w-full  justify-center overflow-hidden rounded-xl sm:h-[14.125rem] lg:col-span-2 xl:h-[20.5625rem] macbook:h-[22.5625rem]">
           <Image src="/img/gallery/4.webp" alt="clinic dentist" layout="fill" />
         </div>
-      </div>
+      </div> */}
       <style jsx>
         {`
           .imgs-container {
