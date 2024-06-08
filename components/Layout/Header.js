@@ -21,7 +21,7 @@ const Header = () => {
                 divNav.current.classList.remove("nav-open");
               }}
             >
-              <Link href="/">{menuItems[1]}</Link>
+              <Link href="/" legacyBehavior>{menuItems[1]}</Link>
             </li>
 
             <li
@@ -30,7 +30,7 @@ const Header = () => {
                 divNav.current.classList.remove("nav-open");
               }}
             >
-              <Link href="/gallery">{menuItems[2]}</Link>
+              <Link href="/gallery" legacyBehavior>{menuItems[2]}</Link>
             </li>
             <li
               className={`${router.pathname == "/services" ? "active" : ""}`}
@@ -38,7 +38,7 @@ const Header = () => {
                 divNav.current.classList.remove("nav-open");
               }}
             >
-              <Link href="/services">{menuItems[3]}</Link>
+              <Link href="/services" legacyBehavior>{menuItems[3]}</Link>
             </li>
             <li
               className={`${router.pathname == "/booking" ? "active" : ""}`}
@@ -46,7 +46,7 @@ const Header = () => {
                 divNav.current.classList.remove("nav-open");
               }}
             >
-              <Link href="/booking">{menuItems[4]}</Link>
+              <Link href="/booking" legacyBehavior>{menuItems[4]}</Link>
             </li>
           </ul>
           <div className="f-ai-c flex-col justify-between gap-[1vw] md:hidden ">
@@ -55,11 +55,11 @@ const Header = () => {
             </div>
             <button className="cursor-pointer bg-transparent px-2 py-1 hover:text-[#F89B1B] active:scale-110">
               {router.locale == "ar" ? (
-                <Link href={router.asPath} locale="en">
+                <Link href={router.asPath} locale="en" legacyBehavior>
                   <a> English</a>
                 </Link>
               ) : (
-                <Link href={router.asPath} locale="ar">
+                <Link href={router.asPath} locale="ar" legacyBehavior>
                   <a> العربية</a>
                 </Link>
               )}
@@ -72,11 +72,11 @@ const Header = () => {
           </div>
           <button className="languages cursor-pointer bg-transparent px-2 py-1 hover:text-[#F89B1B] active:scale-110">
             {router.locale == "ar" ? (
-              <Link href={router.asPath} locale="en">
+              <Link href={router.asPath} locale="en" legacyBehavior>
                 <a> English</a>
               </Link>
             ) : (
-              <Link href={router.asPath} locale="ar">
+              <Link href={router.asPath} locale="ar" legacyBehavior>
                 <a> العربية</a>
               </Link>
             )}

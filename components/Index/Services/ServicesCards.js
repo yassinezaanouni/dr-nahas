@@ -41,7 +41,7 @@ const ServicesCards = ({ isServicePage = false, id = "" }) => {
           {t("servicesHeader").split(" ").slice(0, -1).join(" ")}
           <span> {t("servicesHeader").split(" ").slice(-1).join(" ")} </span>
         </h2>
-        <Link href={"/services/#services"}>
+        <Link href={"/services/#services"} legacyBehavior>
           <div>
             <Button
               text={t("servicesBtn")}
@@ -191,7 +191,7 @@ const ServicesCards = ({ isServicePage = false, id = "" }) => {
             <DropDown5 />
           </motion.div>
         )}
-        <Link href="/services/#services">
+        <Link href="/services/#services" legacyBehavior>
           <div className={`${isServicePage ? "hidden" : ""}`}>
             <Button text={t("servicesBtn")} tw={`  mt-8 md:hidden `} />
           </div>

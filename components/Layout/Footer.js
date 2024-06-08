@@ -51,21 +51,21 @@ const Footer = () => {
           <p className="max-w-[40ch] text-light">{items[1]}</p>
           <ul className="social-medias f-ai-c  gap-3">
             <li className=" f-ai-c relative aspect-square w-10 cursor-pointer justify-center rounded-full bg-primary/30 hover:bg-primary/20 md:w-12">
-              <Link href="#">
+              <Link href="#" legacyBehavior>
                 <a style={{ height: 18 }}>
                   <Image src="/icons/social-media/fb.svg" width={18} height={18} alt="Facebook" />
                 </a>
               </Link>
             </li>
             <li className=" f-ai-c relative aspect-square w-10 cursor-pointer justify-center rounded-full bg-primary/30 hover:bg-primary/20 md:w-12">
-              <Link href="#">
+              <Link href="#" legacyBehavior>
                 <a style={{ height: 24 }}>
                   <Image src="/icons/social-media/youtube.svg" width={24} height={24} alt="Youtube" />
                 </a>
               </Link>
             </li>
             <li className=" f-ai-c relative aspect-square w-10 cursor-pointer justify-center rounded-full bg-primary/30 hover:bg-primary/20 md:w-12">
-              <Link href="#">
+              <Link href="#" legacyBehavior>
                 <a style={{ height: 18 }}>
                   <Image src="/icons/social-media/instagram.svg" width={18} height={18} alt="Instagram" />
                 </a>
@@ -77,19 +77,19 @@ const Footer = () => {
           <h3 className="text-lg font-medium">{items[2]}</h3>
           <ul className="">
             <li>
-              <Link href="/services?service=1#services">{items[3]}</Link>
+              <Link href="/services?service=1#services" legacyBehavior>{items[3]}</Link>
             </li>
             <li>
-              <Link href="/services?service=2#services">{items[4]}</Link>
+              <Link href="/services?service=2#services" legacyBehavior>{items[4]}</Link>
             </li>
             <li>
-              <Link href="/services?service=3#services">{items[5]}</Link>
+              <Link href="/services?service=3#services" legacyBehavior>{items[5]}</Link>
             </li>
             <li>
-              <Link href="/services?service=5#services">{items[6]}</Link>
+              <Link href="/services?service=5#services" legacyBehavior>{items[6]}</Link>
             </li>
             <li>
-              <Link href="/services?service=4#services">{items[7]}</Link>
+              <Link href="/services?service=4#services" legacyBehavior>{items[7]}</Link>
             </li>
           </ul>
         </div>
@@ -97,17 +97,17 @@ const Footer = () => {
           <h3 className="text-lg font-medium">{items[8]}</h3>
           <ul className="">
             <li>
-              <Link href="/">{items[9]}</Link>
+              <Link href="/" legacyBehavior>{items[9]}</Link>
             </li>
             <li>
-              <Link href="/gallery">{items[10]}</Link>
+              <Link href="/gallery" legacyBehavior>{items[10]}</Link>
             </li>
             <li>
-              <Link href="/services">{items[11]}</Link>
+              <Link href="/services" legacyBehavior>{items[11]}</Link>
             </li>
 
             <li>
-              <Link href="/booking">{items[12]}</Link>
+              <Link href="/booking" legacyBehavior>{items[12]}</Link>
             </li>
           </ul>
         </div>

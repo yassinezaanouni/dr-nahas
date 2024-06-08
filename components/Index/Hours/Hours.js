@@ -21,7 +21,7 @@ const Hours = () => {
             <span className="text-primary"> {t("starRating")}</span>
           </h3>
         </div>
-        <Link href={"/booking"}>
+        <Link href={"/booking"} legacyBehavior>
           <div className="mx-auto max-w-[16rem] lg:mx-0">
             <Button text={t("bookBtn")} tw="" />
           </div>
