@@ -2,7 +2,7 @@ import React from "react";
 import FloatingCard from "../Widgets/Index/FloatingCard";
 import Rating from "../Widgets/Rating";
 import Connection from "./Connection";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const Figure = ({ author, text, rating, image }) => {
   return (

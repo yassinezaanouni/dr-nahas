@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Treatment from "../Index/Treatment/Treatment";
 import { useTranslation } from "next-i18next";
 import MyVideo from "../Widgets/MyVideo";

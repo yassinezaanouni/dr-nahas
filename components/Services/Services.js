@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import ServicesCards from "../Index/Services/ServicesCards";
 import BookAppointement from "../Widgets/BookAppointement";
 import ServicesDropdowns from "../Widgets/ServicesDropdown/ServicesDropdowns";

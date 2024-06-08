@@ -6,7 +6,7 @@ import "swiper/css";
 // import required modules
 import { Pagination, Autoplay } from "swiper";
 
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 const ShareLove = () => {

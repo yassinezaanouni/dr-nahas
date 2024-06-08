@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { Hour } from "../Index/Hours/Hour";
 import { Button } from "./Button";
 import { useTranslation } from "next-i18next";

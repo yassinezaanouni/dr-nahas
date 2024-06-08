@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import BluredDiv from "../../Widgets/BluredDiv";
 import FloatingCard from "../../Widgets/Index/FloatingCard";
 import { useTranslation } from "next-i18next";

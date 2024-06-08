@@ -1,5 +1,5 @@
 import { Hour } from "./Hour";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { useTranslation } from "next-i18next";
 
 const WorkHours = ({ tw }) => {

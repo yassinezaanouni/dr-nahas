@@ -1,5 +1,5 @@
 import { Button } from "../../Widgets/Button";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { useTranslation } from "next-i18next";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";

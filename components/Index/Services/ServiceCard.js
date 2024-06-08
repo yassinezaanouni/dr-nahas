@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 const ServiceCard = ({ image, title, desc, isSelected }) => {
   return (
     <div

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 export function Hour({ days, time, tw, tw2 }) {
   return (

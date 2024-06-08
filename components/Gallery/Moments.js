@@ -9,7 +9,7 @@ import "swiper/css/navigation";
 // import required modules
 import { Navigation, Pagination } from "swiper";
 
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 const Moments = () => {
