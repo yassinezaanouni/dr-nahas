@@ -21,7 +21,7 @@
     "react-scroll-parallax": "^3.4.5",
     "sharp": "^0.33.4",
     "styled-jsx-plugin-postcss": "^4.0.1",
-    "swiper": "^11.1.4"
+    "swiper": "8.0.7"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.19",
