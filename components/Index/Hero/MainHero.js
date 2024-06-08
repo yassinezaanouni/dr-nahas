@@ -10,7 +10,7 @@ const MainHero = () => {
   const { t } = useTranslation("index");
   const router = useRouter();
   return (
-    <div className="gap-y  mt-2 flex flex-wrap items-center justify-between gap-x-12 lg:-mt-1">
+    <div className="gap-y gap-x-12 lg:-mt-1 flex flex-wrap items-center justify-between mt-2">
       <div className=" flex-1">
         <h1 className=" relative mt-3 max-w-[15ch] ">
           {t("hero")}
@@ -20,7 +20,7 @@ const MainHero = () => {
         <Button text={t("heroBtn")} tw={" mb-8 mt-4 lg:my-8"} />
       </div>
       <div className=" img-container">
-        <div className=" relative  justify-self-end">
+        <div className=" justify-self-end relative">
           <div
             className={`only-desktop absolute bottom-0 z-10  ${
               router.locale == "ar" ? "translate-x-1/2" : "-translate-x-1/2"
@@ -35,7 +35,7 @@ const MainHero = () => {
               />
             </Parallax>
           </div>
-          <div className="  absolute -z-10 -translate-x-1/2 -translate-y-1/2	">
+          <div className=" -z-10 absolute -translate-x-1/2 -translate-y-1/2">
             <Image
               src="/widgets/points.svg"
               alt=""
@@ -48,8 +48,9 @@ const MainHero = () => {
             alt="Doctor Nahas doctor near me"
             width="481"
             height={"502"}
+            priority
           />
-          <div className="  absolute right-0 -z-10 translate-x-1/2 -translate-y-1/2	">
+          <div className=" -z-10 absolute right-0 translate-x-1/2 -translate-y-1/2">
             <Image
               src="/widgets/points.svg"
               alt=""
